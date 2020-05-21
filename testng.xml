@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Suite">
+
+	<listeners>
+		<listener class-name="com.listner.TestListener" />
+	</listeners>
+	<test name="Real Device Test">
+		<parameter name="Device" value="Real_Device"></parameter>
+		<classes>
+			<class name="com.appium.test.EriBank" />
+		</classes>
+	</test>
+	<!--<test name="Test"> <parameter name="Device" value="Cloud_Device"></parameter> 
+		<classes> <class name="com.appium.test.EriBank" /> </classes> </test> -->
+	<test name="Emulator Test">
+		<parameter name="Device" value="Emulator_Device"></parameter>
+		<classes>
+			<class name="com.appium.test.EriBank" />
+		</classes>
+	</test>
+</suite> <!-- Suite -->
+	
