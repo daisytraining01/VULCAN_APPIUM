@@ -17,13 +17,13 @@ public class TestListener implements ITestListener {
  
   
     public synchronized void onStart(ITestContext context) {
-        System.out.println("Extent Reports Version 3 Test Suite started!");
+        System.out.println("Extent Reports Version 2 Test Suite started!");
        
     }
  
  
     public synchronized void onFinish(ITestContext context) {
-        System.out.println(("Extent Reports Version 3  Test Suite is ending!"));
+        System.out.println(("Extent Reports Version 2  Test Suite is ending!"));
         extent.flush();
     }
  

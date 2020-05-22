@@ -1,25 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24346" started-at="2020-05-22T16:14:06 IST" finished-at="2020-05-22T16:14:30 IST">
+  <suite name="Suite" duration-ms="58480" started-at="2020-05-22T17:01:32 IST" finished-at="2020-05-22T17:02:30 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="24346" started-at="2020-05-22T16:14:06 IST" finished-at="2020-05-22T16:14:30 IST">
+    <test name="Real Device Test" duration-ms="27284" started-at="2020-05-22T17:01:32 IST" finished-at="2020-05-22T17:01:59 IST">
       <class name="com.appium.test.Univtestng">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.appium.test.Univtestng@4f6be2]" name="setUp" is-config="true" duration-ms="15446" started-at="2020-05-22T16:14:06 IST" finished-at="2020-05-22T16:14:21 IST">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.appium.test.Univtestng@cf48b7]" name="setUp" is-config="true" duration-ms="18992" started-at="2020-05-22T17:01:32 IST" finished-at="2020-05-22T17:01:51 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Real_Device]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="sampleTest()[pri:0, instance:com.appium.test.Univtestng@4f6be2]" name="sampleTest" duration-ms="7907" started-at="2020-05-22T16:14:21 IST" finished-at="2020-05-22T16:14:29 IST">
+        <test-method status="PASS" signature="sampleTest()[pri:0, instance:com.appium.test.Univtestng@cf48b7]" name="sampleTest" duration-ms="7450" started-at="2020-05-22T17:01:51 IST" finished-at="2020-05-22T17:01:58 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sampleTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.appium.test.Univtestng@4f6be2]" name="tearDown" is-config="true" duration-ms="896" started-at="2020-05-22T16:14:29 IST" finished-at="2020-05-22T16:14:30 IST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.appium.test.Univtestng@cf48b7]" name="tearDown" is-config="true" duration-ms="691" started-at="2020-05-22T17:01:58 IST" finished-at="2020-05-22T17:01:59 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.appium.test.Univtestng -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Real Device Test -->
+    <test name="Test" duration-ms="29616" started-at="2020-05-22T17:02:01 IST" finished-at="2020-05-22T17:02:30 IST">
+      <class name="com.appium.test.Univtestng">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.appium.test.Univtestng@1445d7f]" name="setUp" is-config="true" duration-ms="11446" started-at="2020-05-22T17:02:01 IST" finished-at="2020-05-22T17:02:12 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Cloud_Device]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="sampleTest()[pri:0, instance:com.appium.test.Univtestng@1445d7f]" name="sampleTest" duration-ms="11988" started-at="2020-05-22T17:02:12 IST" finished-at="2020-05-22T17:02:24 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampleTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.appium.test.Univtestng@1445d7f]" name="tearDown" is-config="true" duration-ms="6166" started-at="2020-05-22T17:02:24 IST" finished-at="2020-05-22T17:02:30 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.appium.test.Univtestng -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

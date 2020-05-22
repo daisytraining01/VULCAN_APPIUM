@@ -42,14 +42,16 @@ public class Univtestng  {
 	static String accessKey = null;
 
 	
-	//@Parameters({"Device"})		
+	@Parameters({"Device"})		
 	@BeforeTest
-	public void setUp() throws MalformedURLException {
+	public void setUp(String Device) throws MalformedURLException {
 		
-	
+		
 		DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-		
-//	    DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+		System.out.println(Device);
+		if (Device.contentEquals("Real_Device")) {
+			System.out.println("Entering Real device");
+
 	    desiredCapabilities.setCapability("platformName", "Android");
 	    desiredCapabilities.setCapability("platformVersion", "10");
 	    desiredCapabilities.setCapability("udid", "34af02ee");
@@ -61,6 +63,24 @@ public class Univtestng  {
 			driver = new AndroidDriver(remoteUrl, desiredCapabilities);
 			user= new UserActions(driver);
 			
+		} 
+		
+		else if  (Device.contentEquals("Cloud_Device")){
+		
+		
+			System.out.println("Entering Cloud device");
+			desiredCapabilities.setCapability("testName", "SpaceFacts");
+			accessKey = "eyJ4cC51Ijo0NTU2OTcsInhwLnAiOjQ1NTY4OSwieHAubSI6Ik1UVTRPVE0yTnprMU1EQXlNdyIsImFsZyI6IkhTMjU2In0.eyJleHAiOjE5MDQ3Mjc5NTAsImlzcyI6ImNvbS5leHBlcml0ZXN0In0.9PEKvslTXNVQjibm_oLIBni8iknsIwo1etQfjBMQ8ME";
+			desiredCapabilities.setCapability("accessKey", accessKey);
+			desiredCapabilities.setCapability("deviceQuery", "@os='android' and @category='PHONE'");
+			desiredCapabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "patel.krupesh.amazinguniversefactsapp");
+			desiredCapabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".MainActivity");
+			desiredCapabilities.setCapability("unicodeKeyboard", "true");
+			desiredCapabilities.setCapability("resetKeyboard", "true");
+			driver = new AndroidDriver(new URL("https://demo.experitest.com/wd/hub"), desiredCapabilities);
+			user= new UserActions(driver);
+		
+		}
 	
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}
@@ -71,7 +91,10 @@ public class Univtestng  {
 	  public void sampleTest() {
 	  
 	  //		user.pass("Application launche successully", driver);
-		  user.Click(pageObjects.confirmationButton1);
+		  if(accessKey==null) {
+		  
+		  user.Click(pageObjects.confirmationButton1);}
+		  
 		  user.Click(pageObjects.search1);
 		  user.SendKeys(pageObjects.search1, "Titan");
 		  user.Click(pageObjects.search2);
@@ -131,7 +154,7 @@ public class Univtestng  {
 	@AfterClass
 	public void logout() throws IOException {
 		user.Click(pageObjects.Logout);
-		user.pass("Logout successul", driver);
+		user.pass("Logout successful", driver);
 	}
 */
 	  @AfterTest
