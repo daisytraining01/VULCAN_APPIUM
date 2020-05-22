@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="14" passed="14" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-05-21T16:58:12 IST" name="Suite" finished-at="2020-05-21T17:00:07 IST" duration-ms="114345">
+  <suite started-at="2020-05-22T12:49:12 IST" name="Suite" finished-at="2020-05-22T12:56:37 IST" duration-ms="445259">
     <groups>
     </groups>
-    <test started-at="2020-05-21T16:58:12 IST" name="Real Device Test" finished-at="2020-05-21T17:00:07 IST" duration-ms="114345">
-      <class name="com.appium.test.EriBank">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.appium.test.EriBank@26b3fd41]" started-at="2020-05-21T16:58:12 IST" name="setUp" finished-at="2020-05-21T16:59:26 IST" duration-ms="73866" status="PASS">
+    <test started-at="2020-05-22T12:49:12 IST" name="Real Device Test" finished-at="2020-05-22T12:52:47 IST" duration-ms="214976">
+      <class name="com.appium.test.wordweb_Mohan">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.appium.test.wordweb_Mohan@8c3b9d]" started-at="2020-05-22T12:49:12 IST" name="setUp" finished-at="2020-05-22T12:49:56 IST" duration-ms="43604" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,67 +18,270 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="login()[pri:0, instance:com.appium.test.EriBank@26b3fd41]" started-at="2020-05-21T16:59:26 IST" name="login" finished-at="2020-05-21T16:59:34 IST" duration-ms="7607" status="PASS">
+        <test-method is-config="true" signature="loadDatabase()[pri:0, instance:com.appium.test.wordweb_Mohan@8c3b9d]" started-at="2020-05-22T12:49:56 IST" name="loadDatabase" finished-at="2020-05-22T12:49:57 IST" duration-ms="1777" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="sampleTest(java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.EriBank@26b3fd41]" started-at="2020-05-21T16:59:34 IST" name="sampleTest" data-provider="dp" finished-at="2020-05-21T16:59:45 IST" duration-ms="11307" status="PASS">
+        </test-method> <!-- loadDatabase -->
+        <test-method signature="Wordweb(java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.wordweb_Mohan@8c3b9d]" started-at="2020-05-22T12:49:59 IST" name="Wordweb" data-provider="dp" finished-at="2020-05-22T12:50:33 IST" duration-ms="34259" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[9876543210]]>
+                <![CDATA[give]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[mohan]]>
+                <![CDATA[1]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- sampleTest -->
-        <test-method signature="sampleTest(java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.EriBank@26b3fd41]" started-at="2020-05-21T16:59:45 IST" name="sampleTest" data-provider="dp" finished-at="2020-05-21T16:59:54 IST" duration-ms="8963" status="PASS">
+        </test-method> <!-- Wordweb -->
+        <test-method signature="Wordweb(java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.wordweb_Mohan@8c3b9d]" started-at="2020-05-22T12:50:33 IST" name="Wordweb" data-provider="dp" finished-at="2020-05-22T12:50:55 IST" duration-ms="21739" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[9865741230]]>
+                <![CDATA[staked]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[goutham]]>
+                <![CDATA[2]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- sampleTest -->
-        <test-method signature="sampleTest(java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.EriBank@26b3fd41]" started-at="2020-05-21T16:59:54 IST" name="sampleTest" data-provider="dp" finished-at="2020-05-21T17:00:04 IST" duration-ms="9883" status="PASS">
+        </test-method> <!-- Wordweb -->
+        <test-method signature="Wordweb(java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.wordweb_Mohan@8c3b9d]" started-at="2020-05-22T12:50:55 IST" name="Wordweb" data-provider="dp" finished-at="2020-05-22T12:51:17 IST" duration-ms="21994" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[9658741230]]>
+                <![CDATA[mistakenly]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[kevin]]>
+                <![CDATA[3]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- sampleTest -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:com.appium.test.EriBank@26b3fd41]" started-at="2020-05-21T17:00:04 IST" name="logout" finished-at="2020-05-21T17:00:05 IST" duration-ms="1218" status="PASS">
+        </test-method> <!-- Wordweb -->
+        <test-method signature="Wordweb(java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.wordweb_Mohan@8c3b9d]" started-at="2020-05-22T12:51:17 IST" name="Wordweb" data-provider="dp" finished-at="2020-05-22T12:51:44 IST" duration-ms="27016" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[takeout]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Wordweb -->
+        <test-method signature="Wordweb(java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.wordweb_Mohan@8c3b9d]" started-at="2020-05-22T12:51:44 IST" name="Wordweb" data-provider="dp" finished-at="2020-05-22T12:52:04 IST" duration-ms="20421" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[breadbox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Wordweb -->
+        <test-method signature="Wordweb(java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.wordweb_Mohan@8c3b9d]" started-at="2020-05-22T12:52:04 IST" name="Wordweb" data-provider="dp" finished-at="2020-05-22T12:52:25 IST" duration-ms="20639" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[readopt]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Wordweb -->
+        <test-method signature="Wordweb(java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.wordweb_Mohan@8c3b9d]" started-at="2020-05-22T12:52:25 IST" name="Wordweb" data-provider="dp" finished-at="2020-05-22T12:52:46 IST" duration-ms="21073" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[discoverably]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Wordweb -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.appium.test.wordweb_Mohan@8c3b9d]" started-at="2020-05-22T12:52:46 IST" name="logout" finished-at="2020-05-22T12:52:46 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.appium.test.EriBank@26b3fd41]" started-at="2020-05-21T17:00:05 IST" name="afterTest" finished-at="2020-05-21T17:00:07 IST" duration-ms="1411" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.appium.test.wordweb_Mohan@8c3b9d]" started-at="2020-05-22T12:52:46 IST" name="afterTest" finished-at="2020-05-22T12:52:47 IST" duration-ms="1073" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- com.appium.test.EriBank -->
+      </class> <!-- com.appium.test.wordweb_Mohan -->
     </test> <!-- Real Device Test -->
+    <test started-at="2020-05-22T12:52:48 IST" name="Emulator Test" finished-at="2020-05-22T12:56:37 IST" duration-ms="228915">
+      <class name="com.appium.test.wordweb_Mohan">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.appium.test.wordweb_Mohan@2638011]" started-at="2020-05-22T12:52:48 IST" name="setUp" finished-at="2020-05-22T12:53:24 IST" duration-ms="35825" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Emulator_Device]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="loadDatabase()[pri:0, instance:com.appium.test.wordweb_Mohan@2638011]" started-at="2020-05-22T12:53:24 IST" name="loadDatabase" finished-at="2020-05-22T12:53:25 IST" duration-ms="1202" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadDatabase -->
+        <test-method signature="Wordweb(java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.wordweb_Mohan@2638011]" started-at="2020-05-22T12:53:25 IST" name="Wordweb" data-provider="dp" finished-at="2020-05-22T12:54:12 IST" duration-ms="47058" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[give]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Wordweb -->
+        <test-method signature="Wordweb(java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.wordweb_Mohan@2638011]" started-at="2020-05-22T12:54:12 IST" name="Wordweb" data-provider="dp" finished-at="2020-05-22T12:54:38 IST" duration-ms="25859" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[staked]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Wordweb -->
+        <test-method signature="Wordweb(java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.wordweb_Mohan@2638011]" started-at="2020-05-22T12:54:38 IST" name="Wordweb" data-provider="dp" finished-at="2020-05-22T12:55:01 IST" duration-ms="22902" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mistakenly]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Wordweb -->
+        <test-method signature="Wordweb(java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.wordweb_Mohan@2638011]" started-at="2020-05-22T12:55:01 IST" name="Wordweb" data-provider="dp" finished-at="2020-05-22T12:55:25 IST" duration-ms="24004" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[takeout]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Wordweb -->
+        <test-method signature="Wordweb(java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.wordweb_Mohan@2638011]" started-at="2020-05-22T12:55:25 IST" name="Wordweb" data-provider="dp" finished-at="2020-05-22T12:55:48 IST" duration-ms="22799" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[breadbox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Wordweb -->
+        <test-method signature="Wordweb(java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.wordweb_Mohan@2638011]" started-at="2020-05-22T12:55:48 IST" name="Wordweb" data-provider="dp" finished-at="2020-05-22T12:56:11 IST" duration-ms="23326" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[readopt]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Wordweb -->
+        <test-method signature="Wordweb(java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.wordweb_Mohan@2638011]" started-at="2020-05-22T12:56:11 IST" name="Wordweb" data-provider="dp" finished-at="2020-05-22T12:56:34 IST" duration-ms="22920" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[discoverably]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Wordweb -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.appium.test.wordweb_Mohan@2638011]" started-at="2020-05-22T12:56:34 IST" name="logout" finished-at="2020-05-22T12:56:34 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.appium.test.wordweb_Mohan@2638011]" started-at="2020-05-22T12:56:34 IST" name="afterTest" finished-at="2020-05-22T12:56:37 IST" duration-ms="2947" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.appium.test.wordweb_Mohan -->
+    </test> <!-- Emulator Test -->
   </suite> <!-- Suite -->
 </testng-results>
