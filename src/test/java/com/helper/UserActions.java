@@ -81,10 +81,11 @@ public class UserActions {
 		driver.findElement(Locator).sendKeys(text);
 	}
 
-	public void ClearAndSendKeys(By Locator, String Text) {
+
+	public void ClearAndSendKeys(By Locator, String text) {
 		driver.findElement(Locator).click();
 		driver.findElement(Locator).clear();
-		driver.findElement(Locator).sendKeys(Text);
+		driver.findElement(Locator).sendKeys(text);
 	}
 
 	public void WaitAndClick(By Locator, int TimeOutInSeconds) {
@@ -122,5 +123,6 @@ public class UserActions {
 		driver.navigate().back();
 	}
 //	-------------------------------------------------------
+
 
 }

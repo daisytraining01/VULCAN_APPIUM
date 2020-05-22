@@ -87,7 +87,6 @@ public class wordweb_Mohan  {
 			desiredCapabilities.setCapability("appActivity", "com.wordwebsoftware.android.wordweb.activity.WordWebActivity");
 			desiredCapabilities.setCapability("unicodeKeyboard", "true");
 			desiredCapabilities.setCapability("resetKeyboard", "true");
-
 			URL remoteUrl = new URL("http://localhost:4723/wd/hub");
 			 driver = new AndroidDriver(remoteUrl, desiredCapabilities);
 			user= new UserActions(driver);
@@ -102,7 +101,12 @@ public class wordweb_Mohan  {
 	
 	@BeforeClass
 	public void loadDatabase() throws IOException {
-		user.Click(pageObjects_Mohan.clikCheckatabase);
+		if(accessKey==null) {
+			user.Click(pageObjects_Mohan.clikCheckatabase);
+		}
+		
+		
+		
 	}
 	
 	

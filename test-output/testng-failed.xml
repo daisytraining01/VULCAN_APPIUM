@@ -4,18 +4,30 @@
   <listeners>
     <listener class-name="com.listner.TestListener"/>
   </listeners>
-  <test thread-count="5" name="Emulator Test(failed)">
-    <parameter name="Device" value="Emulator_Device"/>
+  <test thread-count="5" name="Cloud test Mohan(failed)">
+    <parameter name="Device" value="Cloud_Device"/>
     <classes>
       <class name="com.appium.test.wordweb_Mohan">
         <methods>
           <include name="setUp"/>
+          <include name="loadDatabase"/>
           <include name="afterTest"/>
-          <include name="login"/>
           <include name="logout"/>
-          <include name="Wordweb" invocation-numbers="1 2 3 4 5 6"/>
+          <include name="Wordweb"/>
         </methods>
       </class> <!-- com.appium.test.wordweb_Mohan -->
     </classes>
-  </test> <!-- Emulator Test(failed) -->
+  </test> <!-- Cloud test Mohan(failed) -->
+  <test thread-count="5" name="Cloud test Kevin(failed)">
+    <parameter name="Device" value="Cloud_Device"/>
+    <classes>
+      <class name="com.appium.test.EmiCalculatorKevin">
+        <methods>
+          <include name="setUp"/>
+          <include name="sampleTest"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- com.appium.test.EmiCalculatorKevin -->
+    </classes>
+  </test> <!-- Cloud test Kevin(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -3,15 +3,26 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="com.appium.test.wordweb_Mohan">
+=======
+      <class name="com.appium.test.EmiCalculatorKevin">
+>>>>>>> kevin
         <methods>
           <include name="sampleTest"/>
           <include name="setUp"/>
+<<<<<<< HEAD
           <include name="afterTest"/>
           <include name="login"/>
           <include name="logout"/>
         </methods>
       </class> <!-- com.appium.test.wordweb_Mohan -->
+=======
+          <include name="sampleTest"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- com.appium.test.EmiCalculatorKevin -->
+>>>>>>> kevin
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

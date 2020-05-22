@@ -15,9 +15,9 @@ public class pageObjects_Mohan  {
  public static final	By searchRandomText = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.TextView");
  
  public static final	By backButton = By.xpath("//android.widget.ImageButton[@content-desc=\"Navigate up\"]");
- public static final    By searchTab = By.xpath("//android.support.v7.app.ActionBar.Tab[@content-desc=\"Search\"]/android.widget.TextView");
+ public static final    By searchTab = By.xpath("//*[@text='SEARCH']");
  public static final    By clickFirstResultType = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ListView/android.widget.LinearLayout[2]");
- public static final    By lookup = By.xpath("//android.support.v7.app.ActionBar.Tab[@content-desc=\"Lookup\"]/android.widget.TextView");
+ public static final    By lookup = By.xpath("//*[@text='LOOKUP']");
 
 //
  public static final    By adverb = By.id("com.wordwebsoftware.android.wordweb:id/search_adv_button");
