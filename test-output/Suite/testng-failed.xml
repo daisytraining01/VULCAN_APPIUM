@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <listeners>
     <listener class-name="com.listner.TestListener"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="Real Device Test(failed)">
+  <test thread-count="5" name="Test(failed)">
     <parameter name="Device" value="Real_Device"/>
     <classes>
-      <class name="com.appium.test.EriBank">
+      <class name="com.notepad.test.Notepad">
         <methods>
           <include name="setUp"/>
-          <include name="afterTest"/>
-          <include name="login"/>
-          <include name="logout"/>
+          <include name="tearDown"/>
           <include name="sampleTest"/>
         </methods>
-      </class> <!-- com.appium.test.EriBank -->
+      </class> <!-- com.notepad.test.Notepad -->
     </classes>
-  </test> <!-- Real Device Test(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
