@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+<<<<<<< HEAD
   <listeners>
     <listener class-name="com.listner.TestListener"/>
   </listeners>
@@ -30,4 +31,19 @@
       </class> <!-- com.appium.test.EmiCalculatorKevin -->
     </classes>
   </test> <!-- Cloud test Kevin(failed) -->
+=======
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="Device" value="Cloud_Device"/>
+    <classes>
+      <class name="com.appium.test.SwethaTasty">
+        <methods>
+          <include name="login"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="sampleTest" invocation-numbers="0 1 2 3"/>
+        </methods>
+      </class> <!-- com.appium.test.SwethaTasty -->
+    </classes>
+  </test> <!-- Test(failed) -->
+>>>>>>> origin/SwethaBranch
 </suite> <!-- Failed suite [Suite] -->

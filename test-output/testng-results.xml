@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="0" total="12" passed="0" failed="0" skipped="12">
   <reporter-output>
   </reporter-output>
@@ -8,6 +9,17 @@
     <test started-at="2020-05-22T15:04:06 IST" name="Cloud test Mohan" finished-at="2020-05-22T15:04:46 IST" duration-ms="40249">
       <class name="com.appium.test.wordweb_Mohan">
         <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.appium.test.wordweb_Mohan@8c3b9d]" started-at="2020-05-22T15:04:06 IST" name="setUp" finished-at="2020-05-22T15:04:15 IST" duration-ms="8735" status="PASS">
+=======
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-05-22T16:18:50 IST" name="Suite" finished-at="2020-05-22T16:20:16 IST" duration-ms="85734">
+    <groups>
+    </groups>
+    <test started-at="2020-05-22T16:18:50 IST" name="Test" finished-at="2020-05-22T16:20:16 IST" duration-ms="85734">
+      <class name="com.appium.test.SwethaTasty">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.appium.test.SwethaTasty@7c0c77c7]" started-at="2020-05-22T16:18:50 IST" name="setUp" finished-at="2020-05-22T16:18:58 IST" duration-ms="7496" status="PASS">
+>>>>>>> origin/SwethaBranch
           <params>
             <param index="0">
               <value>
@@ -18,6 +30,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="loadDatabase()[pri:0, instance:com.appium.test.wordweb_Mohan@8c3b9d]" started-at="2020-05-22T15:04:15 IST" name="loadDatabase" finished-at="2020-05-22T15:04:45 IST" duration-ms="30450" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
@@ -723,6 +736,17 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <param index="0">
               <value>
                 <![CDATA[Cloud_Device]]>
+=======
+        <test-method is-config="true" signature="login()[pri:0, instance:com.appium.test.SwethaTasty@7c0c77c7]" started-at="2020-05-22T16:18:58 IST" name="login" finished-at="2020-05-22T16:18:58 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="sampleTest(java.lang.String)[pri:0, instance:com.appium.test.SwethaTasty@7c0c77c7]" started-at="2020-05-22T16:18:58 IST" name="sampleTest" data-provider="dp" finished-at="2020-05-22T16:19:15 IST" duration-ms="16788" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[french fries]]>
+>>>>>>> origin/SwethaBranch
               </value>
             </param>
           </params>
@@ -923,6 +947,7 @@ at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sampleTest -->
+<<<<<<< HEAD
         <test-method signature="sampleTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.EmiCalculatorKevin@3098cf3b]" started-at="2020-05-22T15:04:54 IST" name="sampleTest" data-provider="dp" finished-at="2020-05-22T15:04:54 IST" duration-ms="0" status="SKIP">
           <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
@@ -1325,5 +1350,46 @@ at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.
         </test-method> <!-- afterTest -->
       </class> <!-- com.appium.test.EmiCalculatorKevin -->
     </test> <!-- Cloud test Kevin -->
+=======
+        <test-method signature="sampleTest(java.lang.String)[pri:0, instance:com.appium.test.SwethaTasty@7c0c77c7]" started-at="2020-05-22T16:19:15 IST" name="sampleTest" data-provider="dp" finished-at="2020-05-22T16:19:32 IST" duration-ms="16534" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[fried rice]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampleTest -->
+        <test-method signature="sampleTest(java.lang.String)[pri:0, instance:com.appium.test.SwethaTasty@7c0c77c7]" started-at="2020-05-22T16:19:32 IST" name="sampleTest" data-provider="dp" finished-at="2020-05-22T16:19:50 IST" duration-ms="17879" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[french toast]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampleTest -->
+        <test-method signature="sampleTest(java.lang.String)[pri:0, instance:com.appium.test.SwethaTasty@7c0c77c7]" started-at="2020-05-22T16:19:50 IST" name="sampleTest" data-provider="dp" finished-at="2020-05-22T16:20:07 IST" duration-ms="17548" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[pasta]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampleTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.appium.test.SwethaTasty@7c0c77c7]" started-at="2020-05-22T16:20:07 IST" name="tearDown" finished-at="2020-05-22T16:20:16 IST" duration-ms="8876" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.appium.test.SwethaTasty -->
+    </test> <!-- Test -->
+>>>>>>> origin/SwethaBranch
   </suite> <!-- Suite -->
 </testng-results>

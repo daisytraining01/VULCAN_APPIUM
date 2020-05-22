@@ -4,6 +4,7 @@
   <test thread-count="5" name="Default test(failed)">
     <classes>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <class name="com.appium.test.wordweb_Mohan">
 =======
       <class name="com.appium.test.EmiCalculatorKevin">
@@ -18,11 +19,22 @@
         </methods>
       </class> <!-- com.appium.test.wordweb_Mohan -->
 =======
+=======
+      <class name="com.appium.test.SwethaTasty">
+        <methods>
+          <include name="login"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+>>>>>>> origin/SwethaBranch
           <include name="sampleTest"/>
           <include name="afterTest"/>
         </methods>
+<<<<<<< HEAD
       </class> <!-- com.appium.test.EmiCalculatorKevin -->
 >>>>>>> kevin
+=======
+      </class> <!-- com.appium.test.SwethaTasty -->
+>>>>>>> origin/SwethaBranch
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
