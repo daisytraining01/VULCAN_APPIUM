@@ -64,9 +64,9 @@ public class EmiCalculatorKevin {
 		}else if (Device.contentEquals("Emulator_Device")) {
 			System.out.println("Entering Emulator");
 			desiredCapabilities.setCapability("platformName", "Android");
-		    desiredCapabilities.setCapability("platformVersion", "10");
-		    desiredCapabilities.setCapability("deviceName", "Pixel_2");
-		    desiredCapabilities.setCapability("udid", "emulator-5554");
+			desiredCapabilities.setCapability("platformVersion", "9");
+			desiredCapabilities.setCapability("udid", "emulator-5554");
+			desiredCapabilities.setCapability("deviceName", "Emulator");
 		    desiredCapabilities.setCapability("appPackage", "com.avrapps.emicalculator");
 		    desiredCapabilities.setCapability("appActivity", ".activities.EMICalculator");
 		    desiredCapabilities.setCapability("automationName", "UiAutomator1");

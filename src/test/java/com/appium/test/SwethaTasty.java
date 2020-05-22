@@ -22,7 +22,7 @@ import com.helper.UserActions;
 public class SwethaTasty {
 	UserActions user;
    AndroidDriver driver;
-   private String accessKey = "eyJ4cC51Ijo0NTU2OTcsInhwLnAiOjQ1NTY4OSwieHAubSI6Ik1UVTRPVE0yTnprMU1EQXlNdyIsImFsZyI6IkhTMjU2In0.eyJleHAiOjE5MDQ3Mjc5NTAsImlzcyI6ImNvbS5leHBlcml0ZXN0In0.9PEKvslTXNVQjibm_oLIBni8iknsIwo1etQfjBMQ8ME";
+   private String accessKey = null;
 
 @Parameters({"Device"})		
   @BeforeTest
@@ -30,8 +30,10 @@ public class SwethaTasty {
 	  DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 	  if (Device.contentEquals("Emulator_Device")) {
 	   System.out.println("Entering Emulator device");
-	    desiredCapabilities.setCapability("platformName", "Android");
-	    desiredCapabilities.setCapability("platformVersion", "10");
+	   desiredCapabilities.setCapability("platformName", "Android");
+		desiredCapabilities.setCapability("platformVersion", "9");
+		desiredCapabilities.setCapability("udid", "emulator-5554");
+		desiredCapabilities.setCapability("deviceName", "Emulator");
 	    desiredCapabilities.setCapability("deviceName", "Android SDK built for x86");
 	    desiredCapabilities.setCapability("appPackage", "com.buzzfeed.tasty");
 	    desiredCapabilities.setCapability("appActivity", "com.buzzfeed.tasty.LauncherActivity");
@@ -41,6 +43,9 @@ public class SwethaTasty {
 	  }
 	   
 	   else if (Device.contentEquals("Cloud_Device")) {
+		   System.out.println("Entering cloud");
+		   accessKey = "eyJ4cC51Ijo0NTU2OTcsInhwLnAiOjQ1NTY4OSwieHAubSI6Ik1UVTRPVE0yTnprMU1EQXlNdyIsImFsZyI6IkhTMjU2In0.eyJleHAiOjE5MDQ3Mjc5NTAsImlzcyI6ImNvbS5leHBlcml0ZXN0In0.9PEKvslTXNVQjibm_oLIBni8iknsIwo1etQfjBMQ8ME";
+		   
 				System.out.println("Entering Cloud device");
 				desiredCapabilities.setCapability("testName", "Quick Start Android Native Demo");
 				desiredCapabilities.setCapability("accessKey", accessKey);
@@ -51,14 +56,18 @@ public class SwethaTasty {
 				user= new UserActions(driver);
 	    }
 
-	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	    driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
   
 }
   @BeforeClass
   public void login() throws IOException {
 	user= new UserActions(driver);
+	
+	System.out.println("Before Class");
+	System.out.println(accessKey);
 	if(accessKey==null)
 	{
+		System.out.println("Emulator ENter / Device");
 		user.Click(pageObjects_Swetha.loginwithgoogle);
 		user.Click(pageObjects_Swetha.displayname);
 	}
@@ -70,13 +79,13 @@ public class SwethaTasty {
 	 user.Click(pageObjects_Swetha.clicksearch);
 	 user.ClearAndSendKeys(pageObjects_Swetha.clicksearch, recepieName);
 	 user.Click(pageObjects_Swetha.Suggestion);
-	 if(accessKey==null) {
-		 user.Click(pageObjects_Swetha.ImageView);
-	 }else {
-		 user.Click(pageObjects_Swetha.selectItem);
-	 }
+//	 if(accessKey==null) {
+//		 user.Click(pageObjects_Swetha.ImageView);
+//	 }else {
+//		 user.Click(pageObjects_Swetha.selectItem);
+//	 }
 	 
-	 
+	 user.Click(pageObjects_Swetha.selectItem);
 	 user.Click(pageObjects_Swetha.AddtoReceipes);
 	 user.Click(pageObjects_Swetha.MyReceipes);
 	 user.Click(pageObjects_Swetha.Discover);

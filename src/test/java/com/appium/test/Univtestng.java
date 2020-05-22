@@ -80,6 +80,21 @@ public class Univtestng  {
 			driver = new AndroidDriver(new URL("https://demo.experitest.com/wd/hub"), desiredCapabilities);
 			user= new UserActions(driver);
 		
+		}else if (Device.contentEquals("Emulator_Device")) {
+			System.out.println("Entering Emulator");
+			desiredCapabilities.setCapability("platformName", "Android");
+			desiredCapabilities.setCapability("platformVersion", "9");
+			desiredCapabilities.setCapability("udid", "emulator-5554");
+			desiredCapabilities.setCapability("deviceName", "Emulator");
+			desiredCapabilities.setCapability("appPackage", "patel.krupesh.amazinguniversefactsapp");
+			desiredCapabilities.setCapability("appActivity", ".MainActivity");
+			desiredCapabilities.setCapability("unicodeKeyboard", "true");
+			desiredCapabilities.setCapability("resetKeyboard", "true");
+			URL remoteUrl = new URL("http://localhost:4723/wd/hub");
+			 driver = new AndroidDriver(remoteUrl, desiredCapabilities);
+			user= new UserActions(driver);
+			
+			
 		}
 	
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -103,7 +118,7 @@ public class Univtestng  {
 		  user.SendKeys(pageObjects.search3, "satellites");
 		  user.Click(pageObjects.titan2);
 		  user.Click(pageObjects.search4);
-		  user.Click(pageObjects.search5);
+		  user.Click(pageObjects.search5);}
 		  
 		  
 

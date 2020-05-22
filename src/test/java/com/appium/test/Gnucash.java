@@ -13,7 +13,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.appium.pageObjects.pageObjects;
+import com.appium.pageObjects.pageObjectSugan;
 import com.helper.ExcelUtil;
 import com.helper.UserActions;
 
@@ -59,6 +59,7 @@ public class Gnucash {
 			desiredCapabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "org.gnucash.android");
 			desiredCapabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".ui.account.AccountsActivity");
 			driver = new AndroidDriver(new URL("https://demo.experitest.com/wd/hub"), desiredCapabilities);
+			
 			user= new UserActions(driver);
 		}else if (Device.contentEquals("Emulator_Device")) {
 			System.out.println("Entering Emulator");
@@ -69,8 +70,7 @@ public class Gnucash {
 			desiredCapabilities.setCapability("appPackage", "org.gnucash.android");
 			desiredCapabilities.setCapability("appActivity", ".ui.account.AccountsActivity");
 
-			URL remoteUrl = new URL("http://localhost:4725/wd/hub");
-			 driver = new AndroidDriver(remoteUrl, desiredCapabilities);
+			driver = new AndroidDriver(new URL("http://localhost:4724/wd/hub"), desiredCapabilities);
 			user= new UserActions(driver);
 			
 			
@@ -90,41 +90,41 @@ public class Gnucash {
 			
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			
-			user.Click(pageObjects.Next);
+			user.Click(pageObjectSugan.Next);
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			user.Click(pageObjects.Next);
-			user.Click(pageObjects.Next);
-			user.Click(pageObjects.checkbox);
-			user.Click(pageObjects.Next);
-			user.Click(pageObjects.Next);
-			user.Click(pageObjects.button1);
+			user.Click(pageObjectSugan.Next);
+			user.Click(pageObjectSugan.Next);
+			user.Click(pageObjectSugan.checkbox);
+			user.Click(pageObjectSugan.Next);
+			user.Click(pageObjectSugan.Next);
+			user.Click(pageObjectSugan.button1);
 			TouchAction action = new TouchAction(driver);
 			action.tap(PointOption.point(522, 1280)).perform();
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			user.Click(pageObjects.salary1);
-			user.SendKeys(pageObjects.salaryDescription,Description);
-			user.SendKeys(pageObjects.salaryAmount1, amount);
-			user.Click(pageObjects.salaryType1);
-			user.Click(pageObjects.salaryDropDown1);
-			user.Click(pageObjects.salaryDropDownValue1);
-			user.Click(pageObjects.salarySave1);
-			user.Click(pageObjects.bonus1);
-			user.SendKeys(pageObjects.bonusDescription1,"My Bonus");
-			user.SendKeys(pageObjects.bonusAmount1,"2000");
-			user.Click(pageObjects.bonusType1);
-			user.Click(pageObjects.bonusSave1);
+			user.Click(pageObjectSugan.salary1);
+			user.SendKeys(pageObjectSugan.salaryDescription,Description);
+			user.SendKeys(pageObjectSugan.salaryAmount1, amount);
+			user.Click(pageObjectSugan.salaryType1);
+			user.Click(pageObjectSugan.salaryDropDown1);
+			user.Click(pageObjectSugan.salaryDropDownValue1);
+			user.Click(pageObjectSugan.salarySave1);
+			user.Click(pageObjectSugan.bonus1);
+			user.SendKeys(pageObjectSugan.bonusDescription1,"My Bonus");
+			user.SendKeys(pageObjectSugan.bonusAmount1,"2000");
+			user.Click(pageObjectSugan.bonusType1);
+			user.Click(pageObjectSugan.bonusSave1);
 			
 			driver.navigate().back();
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			
 			
-			user.Click(pageObjects.Expenses1);
+			user.Click(pageObjectSugan.Expenses1);
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			user.Click(pageObjects.addExpenses1);
-			user.SendKeys(pageObjects.accountName1,"KKBK");
-			user.SendKeys(pageObjects.accountDescription1,"My Expense");
-			user.Click(pageObjects.placeholderAccount1);
-			user.Click(pageObjects.Expensesave1);
+			user.Click(pageObjectSugan.addExpenses1);
+			user.SendKeys(pageObjectSugan.accountName1,"KKBK");
+			user.SendKeys(pageObjectSugan.accountDescription1,"My Expense");
+			user.Click(pageObjectSugan.placeholderAccount1);
+			user.Click(pageObjectSugan.Expensesave1);
 			driver.navigate().back();
 		}
 	*/
@@ -133,40 +133,47 @@ public class Gnucash {
 		
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
-		user.Click(pageObjects.Next);
-		user.Click(pageObjects.Next);
-		user.Click(pageObjects.Next);
-		user.Click(pageObjects.checkbox);
-		user.Click(pageObjects.Next);
-		user.Click(pageObjects.Next);
-		user.Click(pageObjects.button1);
+		
+		if(accessKey==null) {
+			user.Click(pageObjectSugan.Next);
+			user.Click(pageObjectSugan.Next);
+			user.Click(pageObjectSugan.Next);
+			user.Click(pageObjectSugan.checkbox);
+			user.Click(pageObjectSugan.Next);
+			user.Click(pageObjectSugan.Next);
+			user.Click(pageObjectSugan.button1);
+			
+			
+		}
+		
+		
 		TouchAction action = new TouchAction(driver);
-		action.tap(PointOption.point(522, 1280)).perform();
+		action.tap(PointOption.point(522, 1280)).perform();	
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		user.Click(pageObjects.salary1);
-		user.SendKeys(pageObjects.salaryDescription,"My Salary");
-		user.SendKeys(pageObjects.salaryAmount1, "2000");
-		user.Click(pageObjects.salaryType1);
-		user.Click(pageObjects.salaryDropDown1);
-		user.Click(pageObjects.salaryDropDownValue1);
-		user.Click(pageObjects.salarySave1);
-		user.Click(pageObjects.bonus1);
-		user.SendKeys(pageObjects.bonusDescription1,"My Bonus");
-		user.SendKeys(pageObjects.bonusAmount1,"2000");
-		user.Click(pageObjects.bonusType1);
-		user.Click(pageObjects.bonusSave1);
+		user.Click(pageObjectSugan.salary1);
+		user.SendKeys(pageObjectSugan.salaryDescription,"My Salary");
+		user.SendKeys(pageObjectSugan.salaryAmount1, "2000");
+		user.Click(pageObjectSugan.salaryType1);
+		user.Click(pageObjectSugan.salaryDropDown1);
+		user.Click(pageObjectSugan.salaryDropDownValue1);
+		user.Click(pageObjectSugan.salarySave1);
+		user.Click(pageObjectSugan.bonus1);
+		user.SendKeys(pageObjectSugan.bonusDescription1,"My Bonus");
+		user.SendKeys(pageObjectSugan.bonusAmount1,"2000");
+		user.Click(pageObjectSugan.bonusType1);
+		user.Click(pageObjectSugan.bonusSave1);
 		
 		driver.navigate().back();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
 		
-		user.Click(pageObjects.Expenses1);
+		user.Click(pageObjectSugan.Expenses1);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		user.Click(pageObjects.addExpenses1);
-		user.SendKeys(pageObjects.accountName1,"KKBK");
-		user.SendKeys(pageObjects.accountDescription1,"My Expense");
-		user.Click(pageObjects.placeholderAccount1);
-		user.Click(pageObjects.Expensesave1);
+		user.Click(pageObjectSugan.addExpenses1);
+		user.SendKeys(pageObjectSugan.accountName1,"KKBK");
+		user.SendKeys(pageObjectSugan.accountDescription1,"My Expense");
+		user.Click(pageObjectSugan.placeholderAccount1);
+		user.Click(pageObjectSugan.Expensesave1);
 		driver.navigate().back();
 	}
 	

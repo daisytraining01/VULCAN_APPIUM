@@ -29,7 +29,7 @@ public class pageObjects  {
  
  public static final	By Logout = By.id("com.experitest.ExperiBank:id/logoutButton");
  
-<<<<<<< HEAD
+
  
  
  
