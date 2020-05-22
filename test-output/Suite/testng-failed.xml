@@ -4,18 +4,16 @@
   <listeners>
     <listener class-name="com.listner.TestListener"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="Real Device Test(failed)">
-    <parameter name="Device" value="Real_Device"/>
+  <test thread-count="5" parallel="tests" name="Test(failed)">
+    <parameter name="Device" value="Cloud_Device"/>
     <classes>
-      <class name="com.appium.test.EriBank">
+      <class name="com.appium.test.EmiCalculatorKevin">
         <methods>
           <include name="setUp"/>
+          <include name="sampleTest" invocation-numbers="0"/>
           <include name="afterTest"/>
-          <include name="login"/>
-          <include name="logout"/>
-          <include name="sampleTest"/>
         </methods>
-      </class> <!-- com.appium.test.EriBank -->
+      </class> <!-- com.appium.test.EmiCalculatorKevin -->
     </classes>
-  </test> <!-- Real Device Test(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

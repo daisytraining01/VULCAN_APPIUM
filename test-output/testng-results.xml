@@ -1,84 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-05-21T16:58:12 IST" name="Suite" finished-at="2020-05-21T17:00:07 IST" duration-ms="114345">
+  <suite started-at="2020-05-22T13:42:01 IST" name="Suite" finished-at="2020-05-22T13:42:50 IST" duration-ms="49099">
     <groups>
     </groups>
-    <test started-at="2020-05-21T16:58:12 IST" name="Real Device Test" finished-at="2020-05-21T17:00:07 IST" duration-ms="114345">
-      <class name="com.appium.test.EriBank">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.appium.test.EriBank@26b3fd41]" started-at="2020-05-21T16:58:12 IST" name="setUp" finished-at="2020-05-21T16:59:26 IST" duration-ms="73866" status="PASS">
+    <test started-at="2020-05-22T13:42:01 IST" name="Test" finished-at="2020-05-22T13:42:50 IST" duration-ms="49099">
+      <class name="com.appium.test.EmiCalculatorKevin">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.appium.test.EmiCalculatorKevin@38102d01]" started-at="2020-05-22T13:42:01 IST" name="setUp" finished-at="2020-05-22T13:42:11 IST" duration-ms="9855" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Real_Device]]>
+                <![CDATA[Cloud_Device]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="login()[pri:0, instance:com.appium.test.EriBank@26b3fd41]" started-at="2020-05-21T16:59:26 IST" name="login" finished-at="2020-05-21T16:59:34 IST" duration-ms="7607" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="sampleTest(java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.EriBank@26b3fd41]" started-at="2020-05-21T16:59:34 IST" name="sampleTest" data-provider="dp" finished-at="2020-05-21T16:59:45 IST" duration-ms="11307" status="PASS">
+        <test-method signature="sampleTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.EmiCalculatorKevin@38102d01]" started-at="2020-05-22T13:42:13 IST" name="sampleTest" data-provider="dp" finished-at="2020-05-22T13:42:44 IST" duration-ms="30974" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[9876543210]]>
+                <![CDATA[10000.0]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[mohan]]>
+                <![CDATA[5.0]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Car Loan]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sampleTest -->
-        <test-method signature="sampleTest(java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.EriBank@26b3fd41]" started-at="2020-05-21T16:59:45 IST" name="sampleTest" data-provider="dp" finished-at="2020-05-21T16:59:54 IST" duration-ms="8963" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[9865741230]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[goutham]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- sampleTest -->
-        <test-method signature="sampleTest(java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.EriBank@26b3fd41]" started-at="2020-05-21T16:59:54 IST" name="sampleTest" data-provider="dp" finished-at="2020-05-21T17:00:04 IST" duration-ms="9883" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[9658741230]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[kevin]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- sampleTest -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:com.appium.test.EriBank@26b3fd41]" started-at="2020-05-21T17:00:04 IST" name="logout" finished-at="2020-05-21T17:00:05 IST" duration-ms="1218" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logout -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.appium.test.EriBank@26b3fd41]" started-at="2020-05-21T17:00:05 IST" name="afterTest" finished-at="2020-05-21T17:00:07 IST" duration-ms="1411" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.appium.test.EmiCalculatorKevin@38102d01]" started-at="2020-05-22T13:42:44 IST" name="afterTest" finished-at="2020-05-22T13:42:50 IST" duration-ms="6681" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- com.appium.test.EriBank -->
-    </test> <!-- Real Device Test -->
+      </class> <!-- com.appium.test.EmiCalculatorKevin -->
+    </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

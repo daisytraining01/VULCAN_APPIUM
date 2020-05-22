@@ -29,4 +29,15 @@ public class pageObjects  {
  
  public static final	By Logout = By.id("com.experitest.ExperiBank:id/logoutButton");
  
+ 
+ 
+ 
+ //------------KEVIN-------------------
+ public static final	By amount = By.id("com.avrapps.emicalculator:id/amount");
+ public static final	By interest = By.id("com.avrapps.emicalculator:id/interest");
+ public static final	By calculate = By.id("com.avrapps.emicalculator:id/button");
+ public static final	By save = By.id("com.avrapps.emicalculator:id/button2");
+ public static final	By emi_Name = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v7.widget.LinearLayoutCompat/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.EditText");
+ public static final	By ok_button = By.id("android:id/button1");
+ 
 }
