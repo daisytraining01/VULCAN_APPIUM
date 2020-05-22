@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <testng-results ignored="0" total="12" passed="0" failed="0" skipped="12">
   <reporter-output>
   </reporter-output>
@@ -20,6 +21,17 @@
       <class name="com.appium.test.SwethaTasty">
         <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.appium.test.SwethaTasty@7c0c77c7]" started-at="2020-05-22T16:18:50 IST" name="setUp" finished-at="2020-05-22T16:18:58 IST" duration-ms="7496" status="PASS">
 >>>>>>> origin/SwethaBranch
+=======
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="58480" started-at="2020-05-22T17:01:32 IST" finished-at="2020-05-22T17:02:30 IST">
+    <groups>
+    </groups>
+    <test name="Real Device Test" duration-ms="27284" started-at="2020-05-22T17:01:32 IST" finished-at="2020-05-22T17:01:59 IST">
+      <class name="com.appium.test.Univtestng">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.appium.test.Univtestng@cf48b7]" name="setUp" is-config="true" duration-ms="18992" started-at="2020-05-22T17:01:32 IST" finished-at="2020-05-22T17:01:51 IST">
+>>>>>>> origin/gokulbranch1
           <params>
             <param index="0">
               <value>
@@ -30,6 +42,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
+<<<<<<< HEAD
 <<<<<<< HEAD
         <test-method is-config="true" signature="loadDatabase()[pri:0, instance:com.appium.test.wordweb_Mohan@8c3b9d]" started-at="2020-05-22T15:04:15 IST" name="loadDatabase" finished-at="2020-05-22T15:04:45 IST" duration-ms="30450" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
@@ -732,10 +745,26 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
     <test started-at="2020-05-22T15:04:47 IST" name="Cloud test Kevin" finished-at="2020-05-22T15:04:54 IST" duration-ms="6399">
       <class name="com.appium.test.EmiCalculatorKevin">
         <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.appium.test.EmiCalculatorKevin@3098cf3b]" started-at="2020-05-22T15:04:47 IST" name="setUp" finished-at="2020-05-22T15:04:54 IST" duration-ms="6244" status="FAIL">
+=======
+        <test-method status="PASS" signature="sampleTest()[pri:0, instance:com.appium.test.Univtestng@cf48b7]" name="sampleTest" duration-ms="7450" started-at="2020-05-22T17:01:51 IST" finished-at="2020-05-22T17:01:58 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampleTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.appium.test.Univtestng@cf48b7]" name="tearDown" is-config="true" duration-ms="691" started-at="2020-05-22T17:01:58 IST" finished-at="2020-05-22T17:01:59 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.appium.test.Univtestng -->
+    </test> <!-- Real Device Test -->
+    <test name="Test" duration-ms="29616" started-at="2020-05-22T17:02:01 IST" finished-at="2020-05-22T17:02:30 IST">
+      <class name="com.appium.test.Univtestng">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.appium.test.Univtestng@1445d7f]" name="setUp" is-config="true" duration-ms="11446" started-at="2020-05-22T17:02:01 IST" finished-at="2020-05-22T17:02:12 IST">
+>>>>>>> origin/gokulbranch1
           <params>
             <param index="0">
               <value>
                 <![CDATA[Cloud_Device]]>
+<<<<<<< HEAD
 =======
         <test-method is-config="true" signature="login()[pri:0, instance:com.appium.test.SwethaTasty@7c0c77c7]" started-at="2020-05-22T16:18:58 IST" name="login" finished-at="2020-05-22T16:18:58 IST" duration-ms="0" status="PASS">
           <reporter-output>
@@ -1391,5 +1420,23 @@ at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.
       </class> <!-- com.appium.test.SwethaTasty -->
     </test> <!-- Test -->
 >>>>>>> origin/SwethaBranch
+=======
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="sampleTest()[pri:0, instance:com.appium.test.Univtestng@1445d7f]" name="sampleTest" duration-ms="11988" started-at="2020-05-22T17:02:12 IST" finished-at="2020-05-22T17:02:24 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampleTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.appium.test.Univtestng@1445d7f]" name="tearDown" is-config="true" duration-ms="6166" started-at="2020-05-22T17:02:24 IST" finished-at="2020-05-22T17:02:30 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.appium.test.Univtestng -->
+    </test> <!-- Test -->
+>>>>>>> origin/gokulbranch1
   </suite> <!-- Suite -->
 </testng-results>

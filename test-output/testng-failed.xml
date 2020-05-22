@@ -1,23 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<<<<<<< HEAD
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
 <<<<<<< HEAD
   <listeners>
     <listener class-name="com.listner.TestListener"/>
   </listeners>
   <test thread-count="5" name="Cloud test Mohan(failed)">
+=======
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.listner.TestListener"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+>>>>>>> origin/gokulbranch1
     <parameter name="Device" value="Cloud_Device"/>
     <classes>
-      <class name="com.appium.test.wordweb_Mohan">
+      <class name="com.appium.test.Univtestng">
         <methods>
+          <include name="sampleTest"/>
+          <include name="tearDown"/>
           <include name="setUp"/>
+<<<<<<< HEAD
           <include name="loadDatabase"/>
           <include name="afterTest"/>
           <include name="logout"/>
           <include name="Wordweb"/>
+=======
+>>>>>>> origin/gokulbranch1
         </methods>
-      </class> <!-- com.appium.test.wordweb_Mohan -->
+      </class> <!-- com.appium.test.Univtestng -->
     </classes>
+<<<<<<< HEAD
   </test> <!-- Cloud test Mohan(failed) -->
   <test thread-count="5" name="Cloud test Kevin(failed)">
     <parameter name="Device" value="Cloud_Device"/>
@@ -46,4 +60,7 @@
     </classes>
   </test> <!-- Test(failed) -->
 >>>>>>> origin/SwethaBranch
+=======
+  </test> <!-- Test(failed) -->
+>>>>>>> origin/gokulbranch1
 </suite> <!-- Failed suite [Suite] -->

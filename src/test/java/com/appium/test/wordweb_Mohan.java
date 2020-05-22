@@ -46,7 +46,7 @@ public class wordweb_Mohan  {
 	
 	@Parameters({"Device"})		
 	@BeforeTest
-	public void setUp( String Device) throws MalformedURLException {
+	public void setUp(String Device) throws MalformedURLException {
 		
 	
 		DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
