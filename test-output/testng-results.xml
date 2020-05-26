@@ -2,23 +2,27 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="67321" started-at="2020-05-26T16:19:10 IST" finished-at="2020-05-26T16:20:17 IST">
+  <suite name="Suite" duration-ms="51480" started-at="2020-05-26T19:16:08 IST" finished-at="2020-05-26T19:16:59 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="67321" started-at="2020-05-26T16:19:10 IST" finished-at="2020-05-26T16:20:17 IST">
+    <test name="Test" duration-ms="51480" started-at="2020-05-26T19:16:08 IST" finished-at="2020-05-26T19:16:59 IST">
       <class name="com.notepad.test.Notepad">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.notepad.test.Notepad@37574691]" name="setUp" is-config="true" duration-ms="25217" started-at="2020-05-26T16:19:10 IST" finished-at="2020-05-26T16:19:35 IST">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.notepad.test.Notepad@21a947fe]" name="setUp" is-config="true" duration-ms="29453" started-at="2020-05-26T19:16:08 IST" finished-at="2020-05-26T19:16:37 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Real_Device]]>
+                <![CDATA[Cloud_Device]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="sampleTest(java.lang.String, java.lang.String)[pri:0, instance:com.notepad.test.Notepad@37574691]" name="sampleTest" duration-ms="16391" started-at="2020-05-26T16:19:38 IST" data-provider="dp" finished-at="2020-05-26T16:19:55 IST">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.notepad.test.Notepad@21a947fe]" name="launchBrowser" is-config="true" duration-ms="1" started-at="2020-05-26T19:16:38 IST" finished-at="2020-05-26T19:16:38 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="sampleTest(java.lang.String, java.lang.String)[pri:0, instance:com.notepad.test.Notepad@21a947fe]" name="sampleTest" duration-ms="4592" started-at="2020-05-26T19:16:40 IST" data-provider="dp" finished-at="2020-05-26T19:16:45 IST">
           <params>
             <param index="0">
               <value>
@@ -34,7 +38,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sampleTest -->
-        <test-method status="PASS" signature="sampleTest1(java.lang.String, java.lang.String)[pri:0, instance:com.notepad.test.Notepad@37574691]" name="sampleTest1" duration-ms="18422" started-at="2020-05-26T16:19:55 IST" data-provider="dp1" depends-on-methods="com.notepad.test.Notepad.sampleTest" finished-at="2020-05-26T16:20:13 IST">
+        <test-method status="PASS" signature="sampleTest1(java.lang.String, java.lang.String)[pri:0, instance:com.notepad.test.Notepad@21a947fe]" name="sampleTest1" duration-ms="8146" started-at="2020-05-26T19:16:45 IST" data-provider="dp1" depends-on-methods="com.notepad.test.Notepad.sampleTest" finished-at="2020-05-26T19:16:53 IST">
           <params>
             <param index="0">
               <value>
@@ -50,7 +54,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sampleTest1 -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.notepad.test.Notepad@37574691]" name="tearDown" is-config="true" duration-ms="3629" started-at="2020-05-26T16:20:13 IST" finished-at="2020-05-26T16:20:17 IST">
+        <test-method status="PASS" signature="CloseBrowser()[pri:0, instance:com.notepad.test.Notepad@21a947fe]" name="CloseBrowser" is-config="true" duration-ms="2" started-at="2020-05-26T19:16:53 IST" finished-at="2020-05-26T19:16:53 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.notepad.test.Notepad@21a947fe]" name="tearDown" is-config="true" duration-ms="6589" started-at="2020-05-26T19:16:53 IST" finished-at="2020-05-26T19:16:59 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

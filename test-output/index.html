@@ -160,7 +160,7 @@
     &lt;listener class-name=&quot;com.listner.TestListener&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
-    &lt;parameter name=&quot;Device&quot; value=&quot;Real_Device&quot;/&gt;
+    &lt;parameter name=&quot;Device&quot; value=&quot;Cloud_Device&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.notepad.test.Notepad&quot;/&gt;
     &lt;/classes&gt;
@@ -206,16 +206,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'sampleTest1')
 data.setCell(0, 2, 'com.notepad.test.Notepad')
-data.setCell(0, 3, 18422);
+data.setCell(0, 3, 8146);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'sampleTest')
 data.setCell(1, 2, 'com.notepad.test.Notepad')
-data.setCell(1, 3, 16391);
+data.setCell(1, 3, 4592);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 34 seconds</span>
+              <span class="suite-total-time">Total running time: 12 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -243,20 +243,28 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.notepad.test.Notepad</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">setUp(Real_Device)</span>
+                <span class="method-name">setUp(Cloud_Device)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
+              <div class="configuration-class before">
+                <span class="method-name">launchBrowser</span>
+                <span class="method-start">29486 ms</span>
+              </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">sampleTest(SIT, System Integration Testing)</span>
-                <span class="method-start">28496 ms</span>
+                <span class="method-start">31869 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">sampleTest1(UAT, User Acceptance Testing)</span>
-                <span class="method-start">45245 ms</span>
+                <span class="method-start">36653 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">CloseBrowser</span>
+                <span class="method-start">44809 ms</span>
+              </div> <!-- configuration-class after -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">63672 ms</span>
+                <span class="method-start">44812 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

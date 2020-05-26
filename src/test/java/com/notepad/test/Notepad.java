@@ -10,10 +10,13 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -28,6 +31,12 @@ public class Notepad {
 	UserActions user;
 
 	static String accesskey = null;
+
+	@BeforeClass
+
+	public void LaunchApp() {
+		System.out.println("Launch the App");
+	}
 
 	@Parameters({ "Device" })
 	@BeforeTest
@@ -132,20 +141,22 @@ public class Notepad {
 		user.Click(PageObjects.saveNote);
 
 	}
-	@Test(dataProvider = "dp1",dependsOnMethods = { "sampleTest" })	
 
-    public void sampleTest1(String title1, String content1) {
+	// @Ignore
+	@Test(dataProvider = "dp1", dependsOnMethods = { "sampleTest" })
 
+	public void sampleTest1(String title1, String content1) {
 
-	user.Click(PageObjects.newNote);
-	user.SendKeys(PageObjects.editTitle,title1);
-	user.SendKeys(PageObjects.editContent,content1);
-	user.Click(PageObjects.saveNote);
-	user.Click(PageObjects.frame);
-	user.Click(PageObjects.deleteNote);
-	user.Click(PageObjects.button);
+		user.Click(PageObjects.newNote);
+		user.SendKeys(PageObjects.editTitle, title1);
+		user.SendKeys(PageObjects.editContent, content1);
+		user.Click(PageObjects.saveNote);
+		user.Click(PageObjects.frame);
+		user.Click(PageObjects.deleteNote);
+		user.Click(PageObjects.button);
 
 	}
+
 	@DataProvider
 	public Object[][] dp() {
 
@@ -160,11 +171,15 @@ public class Notepad {
 
 	}
 
+	@AfterClass
+
+	public void TerminateApp() {
+		System.out.println("Terminate the App");
+	}
+
 	@AfterTest
 	public void tearDown() {
 		driver.quit();
 	}
-
-//	@AfterTest
 
 }

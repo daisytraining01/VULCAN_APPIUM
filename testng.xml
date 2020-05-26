@@ -4,14 +4,17 @@
 	<listeners>
 		<listener class-name="com.listner.TestListener" />
 	</listeners>
-	<!--<test name="Test"> <parameter name="Device" value="Emulator_Device"></parameter> 
-		<classes> <class name="com.notepad.test.Notepad" /> </classes> </test>-->
-	<test name="Test">
-		<parameter name="Device" value="Real_Device"></parameter>
+	
+	<!--<test name="Test">
+		<parameter name="Device" value="Emulator_Device"></parameter>
 		<classes>
 			<class name="com.notepad.test.Notepad" />
 		</classes>
-	</test>
-	<!--<test name="Test"> <parameter name="Device" value="Cloud_Device"></parameter> 
+	</test>-->
+	
+	<!--<test name="Test"> <parameter name="Device" value="Real_Device"></parameter> 
 		<classes> <class name="com.notepad.test.Notepad" /> </classes> </test> -->
+		
+	<test name="Test"> <parameter name="Device" value="Cloud_Device"></parameter> 
+		<classes> <class name="com.notepad.test.Notepad" /> </classes> </test>
 </suite> <!-- Suite -->
