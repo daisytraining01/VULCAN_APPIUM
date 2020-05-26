@@ -6,69 +6,59 @@
 		<listener class-name="com.listner.TestListener" />
 	</listeners>
 
-<!--  
-	
-	<test name="Test">
-		<parameter name="Device" value="Cloud_Device"></parameter>
-		<classes>
-			<class name="com.appium.test.SwethaTasty" />
-		</classes>
-	</test>
-	
-	<test name="Cloud test Kevin">
-		<parameter name="Device" value="Cloud_Device"></parameter>
-		<classes>
-			<class name="com.appium.test.EmiCalculatorKevin" />
-		</classes>
-	</test>
-	
-	<test name="Gokul Cloud">
-		<parameter name="Device" value="Cloud_Device"></parameter>
-		<classes>
-			<class name="com.appium.test.Univtestng" />
-		</classes>
-	</test>
 
-	
-
-
-			
-	   <test name="Emulator Test">
-		<parameter name="Device" value="Emulator_Device"></parameter>
-		<classes>
-			<class name="com.appium.test.SwethaTasty" />
-		</classes>
-	</test>
-	
-	<test name="Suganth Cloud">
-		<parameter name="Device" value="Cloud_Device"></parameter>
-		<classes>
-			<class name="com.appium.test.Gnucash" />
-		</classes>
-	</test>
-	
-
-	<test name="Cloud test Mohan">
-		<parameter name="Device" value="Cloud_Device"></parameter>
-		<classes>
-			<class name="com.appium.test.wordweb_Mohan" />
-		</classes>
-	</test>
-	
-	<test name="Mohan real Device">
-		<parameter name="Device" value="Real_Device"></parameter>
-		<classes>
-			<class name="com.appium.test.wordweb_Mohan" />
-		</classes>
-	</test>  	-->
-	
-	
+	<!-- 	
 	<test name="Mohan  Emulator">
 		<parameter name="Device" value="Emulator_Device"></parameter>
 		<classes>
 			<class name="com.appium.test.wordweb_Mohan" />
 		</classes>
 	</test>  
+	
+	
+
+	
+	 
+	
+	 <test name="Mohan  Emulator">
+		<parameter name="Device" value="Emulator_Device"></parameter>
+		<classes>
+			<class name="com.appium.test.wordweb_Mohan" />
+		</classes>
+	</test>  
+	 
+	
+	 
+	 <test name="Shambu Cloud  Cloud">
+		<parameter name="Device" value="Cloud_Device"></parameter>
+		<classes>
+			<class name="com.appium.test.WheelSize" />
+		</classes>
+	</test>  
+	
+		<test name="Mohan  realDevice">
+		<parameter name="Device" value="Cloud_Device"></parameter>
+		<classes>
+			<class name="com.appium.test.wordweb_Mohan" />
+		</classes>
+	</test>  
+	
+	<test name="Kevin  realDevice">
+		<parameter name="Device" value="Cloud_Device"></parameter>
+		<classes>
+			<class name="com.appium.test.EmiCalculatorKevin" />
+		</classes>
+	</test>  
+	
+	
+	-->
+	
+	 <test name="Shambu Cloud  Cloud">
+		<parameter name="Device" value="Emulator_Device"></parameter>
+		<classes>
+			<class name="com.appium.test.Gnucash" />
+		</classes>
+	</test> 
 
 </suite>
 

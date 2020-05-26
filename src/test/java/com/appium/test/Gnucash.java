@@ -3,17 +3,21 @@ package com.appium.test;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.appium.pageObjects.pageObjectSugan;
+import com.helper.DatabaseConnector;
 import com.helper.ExcelUtil;
 import com.helper.UserActions;
 
@@ -26,15 +30,13 @@ public class Gnucash {
 
 	UserActions user;
 	AndroidDriver driver;
-	
+
 	static String accessKey = null;
 
-	
-	@Parameters({"Device"})		
-	@BeforeTest
-	public void setUp( String Device) throws MalformedURLException {
-		
-	
+	@Parameters({ "Device" })
+	@BeforeMethod
+	public void setUp(String Device) throws MalformedURLException {
+
 		DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 		System.out.println(Device);
 		if (Device.contentEquals("Real_Device")) {
@@ -47,9 +49,9 @@ public class Gnucash {
 			desiredCapabilities.setCapability("appActivity", ".ui.account.AccountsActivity");
 			URL remoteUrl = new URL("http://localhost:4723/wd/hub");
 			driver = new AndroidDriver(remoteUrl, desiredCapabilities);
-			
-			user= new UserActions(driver);
-			
+
+			user = new UserActions(driver);
+
 		} else if (Device.contentEquals("Cloud_Device")) {
 			System.out.println("Entering Cloud device");
 			desiredCapabilities.setCapability("testName", "Suganth");
@@ -59,9 +61,9 @@ public class Gnucash {
 			desiredCapabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "org.gnucash.android");
 			desiredCapabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".ui.account.AccountsActivity");
 			driver = new AndroidDriver(new URL("https://demo.experitest.com/wd/hub"), desiredCapabilities);
-			
-			user= new UserActions(driver);
-		}else if (Device.contentEquals("Emulator_Device")) {
+
+			user = new UserActions(driver);
+		} else if (Device.contentEquals("Emulator_Device")) {
 			System.out.println("Entering Emulator");
 			desiredCapabilities.setCapability("platformName", "Android");
 			desiredCapabilities.setCapability("platformVersion", "9");
@@ -71,117 +73,127 @@ public class Gnucash {
 			desiredCapabilities.setCapability("appActivity", ".ui.account.AccountsActivity");
 
 			driver = new AndroidDriver(new URL("http://localhost:4724/wd/hub"), desiredCapabilities);
-			user= new UserActions(driver);
-			
-			
+			user = new UserActions(driver);
+
 		}
 
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}
-	/*
-	  @DataProvider
-	  public Object[][] dp() {
-		  
-			return ExcelUtil.getTestData("./testData.xlsx", "data")  ;
-	  }
+
+	// Data Provider using Excel
+
+//	@DataProvider
+//
+//	public Object[][] dp() {
+//
+//		return ExcelUtil.getTestData("./TestReport/testData.xlsx", "Sheet1");
+//	}
+
+
+	// Data Provider using DB
+	
+	 @DataProvider public Object[][] dp() throws SQLException {
+	 System.out.println("DB Connection method in");
+	  Object data[][] = DatabaseConnector.getDataFromDatabase("Suganth"); 
 	  
-	  @Test(dataProvider="dp")
-		public void withDataProvider(String Description,String amount) throws IOException {
-			
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			
-			user.Click(pageObjectSugan.Next);
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			user.Click(pageObjectSugan.Next);
-			user.Click(pageObjectSugan.Next);
-			user.Click(pageObjectSugan.checkbox);
-			user.Click(pageObjectSugan.Next);
-			user.Click(pageObjectSugan.Next);
-			user.Click(pageObjectSugan.button1);
-			TouchAction action = new TouchAction(driver);
-			action.tap(PointOption.point(522, 1280)).perform();
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			user.Click(pageObjectSugan.salary1);
-			user.SendKeys(pageObjectSugan.salaryDescription,Description);
-			user.SendKeys(pageObjectSugan.salaryAmount1, amount);
-			user.Click(pageObjectSugan.salaryType1);
-			user.Click(pageObjectSugan.salaryDropDown1);
-			user.Click(pageObjectSugan.salaryDropDownValue1);
-			user.Click(pageObjectSugan.salarySave1);
-			user.Click(pageObjectSugan.bonus1);
-			user.SendKeys(pageObjectSugan.bonusDescription1,"My Bonus");
-			user.SendKeys(pageObjectSugan.bonusAmount1,"2000");
-			user.Click(pageObjectSugan.bonusType1);
-			user.Click(pageObjectSugan.bonusSave1);
-			
-			driver.navigate().back();
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			
-			
-			user.Click(pageObjectSugan.Expenses1);
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			user.Click(pageObjectSugan.addExpenses1);
-			user.SendKeys(pageObjectSugan.accountName1,"KKBK");
-			user.SendKeys(pageObjectSugan.accountDescription1,"My Expense");
-			user.Click(pageObjectSugan.placeholderAccount1);
-			user.Click(pageObjectSugan.Expensesave1);
-			driver.navigate().back();
-		}
-	*/
-	@Test
-	public void withoutDataProvider() throws IOException {
-		
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		
-		
-		if(accessKey==null) {
-			user.Click(pageObjectSugan.Next);
-			user.Click(pageObjectSugan.Next);
-			user.Click(pageObjectSugan.Next);
-			user.Click(pageObjectSugan.checkbox);
-			user.Click(pageObjectSugan.Next);
-			user.Click(pageObjectSugan.Next);
-			user.Click(pageObjectSugan.button1);
-			
-			
-		}
-		
-		
+	  return data;
+	  
+	  }
+	 
+	 
+	@Test(dataProvider = "dp")
+	public void withDataProvider(String Description, String Amount, String Bonus, String bonusAmount)
+			throws IOException {
+
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+
+		user.Click(pageObjectSugan.Next);
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		user.Click(pageObjectSugan.Next);
+		user.Click(pageObjectSugan.Next);
+		user.Click(pageObjectSugan.checkbox);
+		user.Click(pageObjectSugan.Next);
+		user.Click(pageObjectSugan.Next);
+		user.Click(pageObjectSugan.button1);
 		TouchAction action = new TouchAction(driver);
-		action.tap(PointOption.point(522, 1280)).perform();	
+		action.tap(PointOption.point(522, 1280)).perform();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		user.Click(pageObjectSugan.salary1);
-		user.SendKeys(pageObjectSugan.salaryDescription,"My Salary");
-		user.SendKeys(pageObjectSugan.salaryAmount1, "2000");
+		user.SendKeys(pageObjectSugan.salaryDescription, Description);
+		user.SendKeys(pageObjectSugan.salaryAmount1, Amount);
 		user.Click(pageObjectSugan.salaryType1);
 		user.Click(pageObjectSugan.salaryDropDown1);
 		user.Click(pageObjectSugan.salaryDropDownValue1);
 		user.Click(pageObjectSugan.salarySave1);
 		user.Click(pageObjectSugan.bonus1);
-		user.SendKeys(pageObjectSugan.bonusDescription1,"My Bonus");
-		user.SendKeys(pageObjectSugan.bonusAmount1,"2000");
+		user.SendKeys(pageObjectSugan.bonusDescription1, Bonus);
+		user.SendKeys(pageObjectSugan.bonusAmount1, bonusAmount);
 		user.Click(pageObjectSugan.bonusType1);
 		user.Click(pageObjectSugan.bonusSave1);
-		
+
 		driver.navigate().back();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		
-		
-		user.Click(pageObjectSugan.Expenses1);
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		user.Click(pageObjectSugan.addExpenses1);
-		user.SendKeys(pageObjectSugan.accountName1,"KKBK");
-		user.SendKeys(pageObjectSugan.accountDescription1,"My Expense");
-		user.Click(pageObjectSugan.placeholderAccount1);
-		user.Click(pageObjectSugan.Expensesave1);
-		driver.navigate().back();
+		// driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
 	}
-	
-	
-	  
-	 
-	 @AfterTest
-		public void afterTest() {
-			driver.quit();
-		}
+	/*
+	 * @Test public void Expenses() {
+	 * 
+	 * user.Click(pageObjectSugan.Expenses);
+	 * driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	 * user.Click(pageObjectSugan.adjustment);
+	 * user.SendKeys(pageObjectSugan.adjustmentdescription,"My Adjustments");
+	 * user.SendKeys(pageObjectSugan.adjustmentamount,"500");
+	 * user.Click(pageObjectSugan.save); driver.navigate().back(); }
+	 */
+	/*
+	 * @Test public void withoutDataProvider() throws IOException {
+	 * 
+	 * driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	 * 
+	 * 
+	 * if(accessKey==null) { user.Click(pageObjectSugan.Next);
+	 * user.Click(pageObjectSugan.Next); user.Click(pageObjectSugan.Next);
+	 * user.Click(pageObjectSugan.checkbox); user.Click(pageObjectSugan.Next);
+	 * user.Click(pageObjectSugan.Next); user.Click(pageObjectSugan.button1);
+	 * 
+	 * 
+	 * }
+	 * 
+	 * 
+	 * TouchAction action = new TouchAction(driver);
+	 * action.tap(PointOption.point(522, 1280)).perform();
+	 * driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	 * user.Click(pageObjectSugan.salary1);
+	 * user.SendKeys(pageObjectSugan.salaryDescription,"My Salary");
+	 * user.SendKeys(pageObjectSugan.salaryAmount1, "2000");
+	 * user.Click(pageObjectSugan.salaryType1);
+	 * user.Click(pageObjectSugan.salaryDropDown1);
+	 * user.Click(pageObjectSugan.salaryDropDownValue1);
+	 * user.Click(pageObjectSugan.salarySave1); user.Click(pageObjectSugan.bonus1);
+	 * user.SendKeys(pageObjectSugan.bonusDescription1,"My Bonus");
+	 * user.SendKeys(pageObjectSugan.bonusAmount1,"2000");
+	 * user.Click(pageObjectSugan.bonusType1);
+	 * user.Click(pageObjectSugan.bonusSave1);
+	 * 
+	 * driver.navigate().back(); driver.manage().timeouts().implicitlyWait(20,
+	 * TimeUnit.SECONDS);
+	 * 
+	 * 
+	 * user.Click(pageObjectSugan.Expenses1);
+	 * driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	 * user.Click(pageObjectSugan.addExpenses1);
+	 * user.SendKeys(pageObjectSugan.accountName1,"KKBK");
+	 * user.SendKeys(pageObjectSugan.accountDescription1,"My Expense");
+	 * user.Click(pageObjectSugan.placeholderAccount1);
+	 * user.Click(pageObjectSugan.Expensesave1); driver.navigate().back(); }
+	 */
+
+	@AfterMethod
+	public void afterTest() {
+		driver.quit();
+	}
+	// when u want to perform multiple test case execution within 1 app launch and
+	// app close-->Use @Before Test and @AfterTest
+	// when on each app launch and app close,a single TC needs to be executed,Use
+	// @BeforeMethod and @AfterMethod
 }

@@ -64,7 +64,7 @@ public class DatabaseConnector {
                     System.out.println(i +  " "+k +  " "+columnName + " " + type +" "+columnValue  );
                     
             
-                    if (!(columnValue == "")) {
+                    if (!(columnValue == null)) {
                         data[i][k] = columnValue.toString();
                     }
                     

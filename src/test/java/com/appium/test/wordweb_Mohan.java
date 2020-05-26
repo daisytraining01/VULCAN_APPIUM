@@ -46,15 +46,11 @@ public class wordweb_Mohan  {
 	AndroidDriver driver;
 	
 	static String accessKey = null;
-
-	
-	
-	
 	@BeforeSuite
 	public void beforeSuite() {
 		System.out.println("Entering Suite");
 	}
-	
+
 	@Parameters({"Device"})	
 	@BeforeTest
 	public void setUp(String Device) throws MalformedURLException {
@@ -99,28 +95,15 @@ public class wordweb_Mohan  {
 			URL remoteUrl = new URL("http://localhost:4723/wd/hub");
 			 driver = new AndroidDriver(remoteUrl, desiredCapabilities);
 			user= new UserActions(driver);
-			
-			
 		}
-
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
-
-	
-	
 	@BeforeClass
 	public void loadDatabase() throws IOException {
 		if(accessKey==null) {
 			user.Click(pageObjects_Mohan.clikCheckatabase);
 		}
 	}
-	
-	
-	@BeforeMethod
-	public void takeAppScreenShot() throws IOException {
-		
-		
-			}
 
 	@Ignore
 	@Test

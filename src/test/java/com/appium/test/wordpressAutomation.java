@@ -29,35 +29,26 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 
 public class wordpressAutomation {
-	
 	WebDriver driver;
-	
- 
   @BeforeTest
   public void beforeTest() throws MalformedURLException {
-	  
 	  DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-	  		  	desiredCapabilities.setCapability("testName", "WordWeb");
+	  	desiredCapabilities.setCapability("testName", "WordWeb");
 		String accessKey = "eyJ4cC51Ijo0NTU2OTcsInhwLnAiOjQ1NTY4OSwieHAubSI6Ik1UVTRPVE0yTnprMU1EQXlNdyIsImFsZyI6IkhTMjU2In0.eyJleHAiOjE5MDQ3Mjc5NTAsImlzcyI6ImNvbS5leHBlcml0ZXN0In0.9PEKvslTXNVQjibm_oLIBni8iknsIwo1etQfjBMQ8ME";
 		desiredCapabilities.setCapability("accessKey", accessKey);
 		desiredCapabilities.setCapability("deviceQuery", "@os='android' and @category='PHONE'");
 		driver = new AndroidDriver<WebElement>(new URL("https://demo.experitest.com/wd/hub"), desiredCapabilities);
 		desiredCapabilities.setCapability(MobileCapabilityType.BROWSER_NAME, BrowserType.CHROME);
   }
-  
-  
-  
-  
   @Test
   public void browserTestGoogleSearch() throws InterruptedException {
      
-//		  WebDriverManager.chromedriver().setup();
-//		  WebDriver driver = new ChromeDriver();
+
           driver.get("https://wordpress.com/wp-login.php");
           new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.id("usernameOrEmail")));
           WebElement userName = driver.findElement(By.id("usernameOrEmail"));
           userName.sendKeys("daisytraining01");
-//          driver.findElement(By.xpath("//*[@text='Continue' and @nodeName='BUTTON']")).click();
+
           driver.findElement(By.xpath("//*[@id='primary']/div/main/div/div/form/div[1]/div[2]/button")).click();  
           
         

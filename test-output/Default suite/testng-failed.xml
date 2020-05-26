@@ -3,18 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.appium.test.wordweb_Mohan">
+      <class name="com.appium.test.GithubAutomation">
         <methods>
-          <include name="afterSuit"/>
-          <include name="setUp"/>
-          <include name="takeAppScreenShot"/>
-          <include name="loadDatabase"/>
+          <include name="beforeTest"/>
           <include name="afterTest"/>
-          <include name="beforeSuite"/>
-          <include name="exit"/>
-          <include name="Wordweb"/>
+          <include name="browserGitHub"/>
         </methods>
-      </class> <!-- com.appium.test.wordweb_Mohan -->
+      </class> <!-- com.appium.test.GithubAutomation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

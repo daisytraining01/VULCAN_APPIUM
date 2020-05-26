@@ -21,7 +21,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.appium.pageObjects.WheelSizePageObject;
-import com.helper.DatabaseConnection;
+import com.helper.DatabaseConnector;
 import com.helper.ExcelUtil;
 import com.helper.UserActions;
 
@@ -122,7 +122,7 @@ private void beforeSuite() {
 		//return ExcelUtil.getTestData("./testData.xlsx", "Wheel");
 		//return new Object [][] {{"Apollo"},{"2020"},{"AZ05"},{"Grip"}};
 		
-		 Object data[][]= DatabaseConnection.getDataFromDatabase("Shambhu");     
+		 Object data[][]= DatabaseConnector.getDataFromDatabase("Shambhu");     
          return data;
 	}
 	@AfterMethod
