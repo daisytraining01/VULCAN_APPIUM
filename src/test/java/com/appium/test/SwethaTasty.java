@@ -77,12 +77,10 @@ public class SwethaTasty {
     
   }
   @Test(dataProvider = "dp")
-  public void sampleTest(String recepieName) {
-	  System.out.println(recepieName);
-		
-		  user.Click(pageObjects_Swetha.SearchBox);
-		  user.Click(pageObjects_Swetha.clicksearch);
-		  user.ClearAndSendKeys(pageObjects_Swetha.clicksearch, recepieName);
+  public void sampleTest(String recepieName) throws InterruptedException {
+
+		user.Click(pageObjects_Swetha.clicksearch);
+		  user.ClearAndSendKeys(pageObjects_Swetha.EnterSeach, recepieName);
 		  user.Click(pageObjects_Swetha.Suggestion); 
 		  user.Click(pageObjects_Swetha.ImageView); 
 		  user.Click(pageObjects_Swetha.selectItem); 
@@ -94,26 +92,27 @@ public class SwethaTasty {
 		 user.Click(pageObjects_Swetha.BackButton);
 		  
   }
+
   @Test(dependsOnMethods ="sampleTest")
   public void sampleTest1(String recepieName) {
 	  
 	 
 	  user.Click(pageObjects_Swetha.SearchBox);
-	  user.Click(pageObjects_Swetha.clicksearch);
+	 
 	
 	 
   }
-  
   @Ignore
   @DataProvider
   public Object[][] dp1() throws SQLException {
 	  return ExcelUtil.getTestData("./testData.xlsx", "Swetha")  ;
   }
   
-  
+ 
+
   @DataProvider
   public Object[][] dp() throws SQLException {
-	 // return new Object [][] {{"Fried rice"},{"Pasta"}};
+	 //return new Object [][] {{"Fried rice"},{"Pasta"}};
 		//return ExcelUtil.getTestData("./testData.xlsx", "Swetha")  ;
 	  
 	Object data[][]= DatabaseConnection.getDataFromDatabase("Swetha");     

@@ -12,6 +12,7 @@
           <include name="login"/>
           <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="sampleTest1"/>
           <include name="sampleTest" invocation-numbers="0 1 2 3"/>
         </methods>
       </class> <!-- com.appium.test.SwethaTasty -->

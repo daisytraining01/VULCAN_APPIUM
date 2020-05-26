@@ -47,7 +47,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>May 26, 2020 04:38:00 PM</span>
+                    <span class='label suite-start-time blue darken-3'>May 26, 2020 08:40:32 PM</span>
 				</a>
 			</li>
 			<li>
@@ -73,6 +73,7 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+						<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -124,14 +125,14 @@
 				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>sampleTest</span>
-						<span class='test-time'>May 26, 2020 04:38:33 PM</span>
+						<span class='test-time'>May 26, 2020 08:41:07 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>May 26, 2020 04:38:33 PM</span>
-	<span class='label end-time'>May 26, 2020 04:38:35 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+208ms</span>
+	<span class='label start-time'>May 26, 2020 08:41:07 PM</span>
+	<span class='label end-time'>May 26, 2020 08:41:38 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 30s+307ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -145,13 +146,15 @@
 			<tbody>
 				<tr class='log' status='fail'>
 					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-					<td class='timestamp'>4:38:35 PM</td>
-					<td class='step-details'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+					<td class='timestamp'>8:41:38 PM</td>
+					<td class='step-details'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'MAVBCP402', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {appActivity: com.buzzfeed.tasty.Launcher..., appPackage: com.buzzfeed.tasty, databaseEnabled: false, desired: {appActivity: com.buzzfeed.tasty.Launcher..., appPackage: com.buzzfeed.tasty, deviceName: Android SDK built for x86, platformName: android, platformVersion: 9, udid: emulator-5554}, deviceApiLevel: 29, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 420, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 63, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1731, left: 0, top: 63, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
+Session ID: 28f8c7d3-a99f-48b3-b733-8a449b4b3cfd
+*** Element info: {Using=id, value=thumbnail}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -166,13 +169,21 @@ Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
 	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
 	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at io.appium.java_client.DefaultGenericMobileElement.execute(DefaultGenericMobileElement.java:45)
-	at io.appium.java_client.MobileElement.execute(MobileElement.java:1)
-	at io.appium.java_client.android.AndroidElement.execute(AndroidElement.java:1)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at com.helper.UserActions.ClearAndSendKeys(UserActions.java:86)
-	at com.appium.test.SwethaTasty.sampleTest(SwethaTasty.java:85)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at com.helper.UserActions.Click(UserActions.java:77)
+	at com.appium.test.SwethaTasty.sampleTest(SwethaTasty.java:86)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -213,14 +224,14 @@ Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
 				<li class='test displayed active  fail' status='fail' bdd='false' test-id='2'>
 					<div class='test-heading'>
 						<span class='test-name'>sampleTest</span>
-						<span class='test-time'>May 26, 2020 04:38:35 PM</span>
+						<span class='test-time'>May 26, 2020 08:41:38 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>May 26, 2020 04:38:35 PM</span>
-	<span class='label end-time'>May 26, 2020 04:38:35 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+28ms</span>
+	<span class='label start-time'>May 26, 2020 08:41:38 PM</span>
+	<span class='label end-time'>May 26, 2020 08:42:03 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 25s+497ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -234,13 +245,14 @@ Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
 			<tbody>
 				<tr class='log' status='fail'>
 					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-					<td class='timestamp'>4:38:35 PM</td>
-					<td class='step-details'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+					<td class='timestamp'>8:42:03 PM</td>
+					<td class='step-details'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'MAVBCP402', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {appActivity: com.buzzfeed.tasty.Launcher..., appPackage: com.buzzfeed.tasty, databaseEnabled: false, desired: {appActivity: com.buzzfeed.tasty.Launcher..., appPackage: com.buzzfeed.tasty, deviceName: Android SDK built for x86, platformName: android, platformVersion: 9, udid: emulator-5554}, deviceApiLevel: 29, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 420, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 63, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1731, left: 0, top: 63, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
+Session ID: 28f8c7d3-a99f-48b3-b733-8a449b4b3cfd
 *** Element info: {Using=id, value=com.buzzfeed.tasty:id/searchBoxContainer}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -270,7 +282,7 @@ Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
 	at com.helper.UserActions.Click(UserActions.java:77)
-	at com.appium.test.SwethaTasty.sampleTest(SwethaTasty.java:83)
+	at com.appium.test.SwethaTasty.sampleTest(SwethaTasty.java:82)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -311,14 +323,14 @@ Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
 				<li class='test displayed active  fail' status='fail' bdd='false' test-id='3'>
 					<div class='test-heading'>
 						<span class='test-name'>sampleTest</span>
-						<span class='test-time'>May 26, 2020 04:38:35 PM</span>
+						<span class='test-time'>May 26, 2020 08:42:03 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>May 26, 2020 04:38:35 PM</span>
-	<span class='label end-time'>May 26, 2020 04:38:35 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+17ms</span>
+	<span class='label start-time'>May 26, 2020 08:42:03 PM</span>
+	<span class='label end-time'>May 26, 2020 08:42:20 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+427ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -332,13 +344,13 @@ Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
 			<tbody>
 				<tr class='log' status='fail'>
 					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-					<td class='timestamp'>4:38:35 PM</td>
+					<td class='timestamp'>8:42:20 PM</td>
 					<td class='step-details'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'MAVBCP402', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {appActivity: com.buzzfeed.tasty.Launcher..., appPackage: com.buzzfeed.tasty, databaseEnabled: false, desired: {appActivity: com.buzzfeed.tasty.Launcher..., appPackage: com.buzzfeed.tasty, deviceName: Android SDK built for x86, platformName: android, platformVersion: 9, udid: emulator-5554}, deviceApiLevel: 29, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 420, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 63, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1731, left: 0, top: 63, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
+Session ID: 28f8c7d3-a99f-48b3-b733-8a449b4b3cfd
 *** Element info: {Using=id, value=com.buzzfeed.tasty:id/searchBoxContainer}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -368,7 +380,7 @@ Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
 	at com.helper.UserActions.Click(UserActions.java:77)
-	at com.appium.test.SwethaTasty.sampleTest(SwethaTasty.java:83)
+	at com.appium.test.SwethaTasty.sampleTest(SwethaTasty.java:82)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -409,14 +421,14 @@ Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
 				<li class='test displayed active  fail' status='fail' bdd='false' test-id='4'>
 					<div class='test-heading'>
 						<span class='test-name'>sampleTest</span>
-						<span class='test-time'>May 26, 2020 04:38:35 PM</span>
+						<span class='test-time'>May 26, 2020 08:42:20 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>May 26, 2020 04:38:35 PM</span>
-	<span class='label end-time'>May 26, 2020 04:38:35 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+28ms</span>
+	<span class='label start-time'>May 26, 2020 08:42:20 PM</span>
+	<span class='label end-time'>May 26, 2020 08:42:20 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+19ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -430,13 +442,13 @@ Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
 			<tbody>
 				<tr class='log' status='fail'>
 					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-					<td class='timestamp'>4:38:35 PM</td>
+					<td class='timestamp'>8:42:20 PM</td>
 					<td class='step-details'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'MAVBCP402', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {appActivity: com.buzzfeed.tasty.Launcher..., appPackage: com.buzzfeed.tasty, databaseEnabled: false, desired: {appActivity: com.buzzfeed.tasty.Launcher..., appPackage: com.buzzfeed.tasty, deviceName: Android SDK built for x86, platformName: android, platformVersion: 9, udid: emulator-5554}, deviceApiLevel: 29, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 420, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 63, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1731, left: 0, top: 63, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
+Session ID: 28f8c7d3-a99f-48b3-b733-8a449b4b3cfd
 *** Element info: {Using=id, value=com.buzzfeed.tasty:id/searchBoxContainer}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -466,7 +478,7 @@ Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
 	at com.helper.UserActions.Click(UserActions.java:77)
-	at com.appium.test.SwethaTasty.sampleTest(SwethaTasty.java:83)
+	at com.appium.test.SwethaTasty.sampleTest(SwethaTasty.java:82)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -477,6 +489,60 @@ Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
 	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
 	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
 	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>sampleTest1</span>
+						<span class='test-time'>May 26, 2020 08:42:20 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 26, 2020 08:42:20 PM</span>
+	<span class='label end-time'>May 26, 2020 08:42:20 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+1ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='skip'>
+					<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+					<td class='timestamp'>8:42:20 PM</td>
+					<td class='step-details'><pre>java.lang.Throwable: Method SwethaTasty.sampleTest1(java.lang.String)[pri:0, instance:com.appium.test.SwethaTasty@3d34d211] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
@@ -538,7 +604,7 @@ Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
 					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>4</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='80%'>4</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='20%'>1</span> others
 				</div>
 			</div>
 		</div>
@@ -553,7 +619,7 @@ Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
 					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>4</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='80%'>4</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='20%'>1</span> others
 				</div>
 			</div>
 		</div>
@@ -590,8 +656,8 @@ Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
 
                         <li class='exception displayed active'>
                             <div class='exception-heading'>
-                                <span class='exception-name'>org.openqa.selenium.WebDriverException</span>
-                                <span class='exception-count right'><span class='label red lighten-1 white-text'>4</span></span>
+                                <span class='exception-name'>org.openqa.selenium.NoSuchElementException</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
                             </div>
                             <div class='exception-content hide'>
                                 <div class='exception-tests'>
@@ -605,14 +671,16 @@ Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
                                         </thead>
                                         <tbody>
                                                     <tr>
-                                                        <td>May 26, 2020 04:38:33 PM</td>
+                                                        <td>May 26, 2020 08:41:07 PM</td>
                                                         <td class='linked' test-id='1'>sampleTest</td>
-                                                        <td><pre><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+                                                        <td><pre><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'MAVBCP402', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {appActivity: com.buzzfeed.tasty.Launcher..., appPackage: com.buzzfeed.tasty, databaseEnabled: false, desired: {appActivity: com.buzzfeed.tasty.Launcher..., appPackage: com.buzzfeed.tasty, deviceName: Android SDK built for x86, platformName: android, platformVersion: 9, udid: emulator-5554}, deviceApiLevel: 29, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 420, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 63, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1731, left: 0, top: 63, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
+Session ID: 28f8c7d3-a99f-48b3-b733-8a449b4b3cfd
+*** Element info: {Using=id, value=thumbnail}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -627,13 +695,21 @@ Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
 	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
 	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at io.appium.java_client.DefaultGenericMobileElement.execute(DefaultGenericMobileElement.java:45)
-	at io.appium.java_client.MobileElement.execute(MobileElement.java:1)
-	at io.appium.java_client.android.AndroidElement.execute(AndroidElement.java:1)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at com.helper.UserActions.ClearAndSendKeys(UserActions.java:86)
-	at com.appium.test.SwethaTasty.sampleTest(SwethaTasty.java:85)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at com.helper.UserActions.Click(UserActions.java:77)
+	at com.appium.test.SwethaTasty.sampleTest(SwethaTasty.java:86)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -665,14 +741,15 @@ Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
 </pre></pre></td>
                                                     </tr>
                                                     <tr>
-                                                        <td>May 26, 2020 04:38:35 PM</td>
+                                                        <td>May 26, 2020 08:41:38 PM</td>
                                                         <td class='linked' test-id='2'>sampleTest</td>
-                                                        <td><pre><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+                                                        <td><pre><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'MAVBCP402', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {appActivity: com.buzzfeed.tasty.Launcher..., appPackage: com.buzzfeed.tasty, databaseEnabled: false, desired: {appActivity: com.buzzfeed.tasty.Launcher..., appPackage: com.buzzfeed.tasty, deviceName: Android SDK built for x86, platformName: android, platformVersion: 9, udid: emulator-5554}, deviceApiLevel: 29, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 420, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 63, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1731, left: 0, top: 63, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
+Session ID: 28f8c7d3-a99f-48b3-b733-8a449b4b3cfd
 *** Element info: {Using=id, value=com.buzzfeed.tasty:id/searchBoxContainer}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -702,7 +779,7 @@ Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
 	at com.helper.UserActions.Click(UserActions.java:77)
-	at com.appium.test.SwethaTasty.sampleTest(SwethaTasty.java:83)
+	at com.appium.test.SwethaTasty.sampleTest(SwethaTasty.java:82)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -733,15 +810,36 @@ Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></pre></td>
                                                     </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                        <li class='exception displayed active'>
+                            <div class='exception-heading'>
+                                <span class='exception-name'>org.openqa.selenium.WebDriverException</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
+                            </div>
+                            <div class='exception-content hide'>
+                                <div class='exception-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
                                                     <tr>
-                                                        <td>May 26, 2020 04:38:35 PM</td>
+                                                        <td>May 26, 2020 08:42:03 PM</td>
                                                         <td class='linked' test-id='3'>sampleTest</td>
                                                         <td><pre><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'MAVBCP402', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {appActivity: com.buzzfeed.tasty.Launcher..., appPackage: com.buzzfeed.tasty, databaseEnabled: false, desired: {appActivity: com.buzzfeed.tasty.Launcher..., appPackage: com.buzzfeed.tasty, deviceName: Android SDK built for x86, platformName: android, platformVersion: 9, udid: emulator-5554}, deviceApiLevel: 29, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 420, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 63, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1731, left: 0, top: 63, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
+Session ID: 28f8c7d3-a99f-48b3-b733-8a449b4b3cfd
 *** Element info: {Using=id, value=com.buzzfeed.tasty:id/searchBoxContainer}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -771,7 +869,7 @@ Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
 	at com.helper.UserActions.Click(UserActions.java:77)
-	at com.appium.test.SwethaTasty.sampleTest(SwethaTasty.java:83)
+	at com.appium.test.SwethaTasty.sampleTest(SwethaTasty.java:82)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -803,14 +901,14 @@ Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
 </pre></pre></td>
                                                     </tr>
                                                     <tr>
-                                                        <td>May 26, 2020 04:38:35 PM</td>
+                                                        <td>May 26, 2020 08:42:20 PM</td>
                                                         <td class='linked' test-id='4'>sampleTest</td>
                                                         <td><pre><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'MAVBCP402', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {appActivity: com.buzzfeed.tasty.Launcher..., appPackage: com.buzzfeed.tasty, databaseEnabled: false, desired: {appActivity: com.buzzfeed.tasty.Launcher..., appPackage: com.buzzfeed.tasty, deviceName: Android SDK built for x86, platformName: android, platformVersion: 9, udid: emulator-5554}, deviceApiLevel: 29, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 420, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 63, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1731, left: 0, top: 63, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
+Session ID: 28f8c7d3-a99f-48b3-b733-8a449b4b3cfd
 *** Element info: {Using=id, value=com.buzzfeed.tasty:id/searchBoxContainer}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -840,7 +938,7 @@ Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
 	at com.helper.UserActions.Click(UserActions.java:77)
-	at com.appium.test.SwethaTasty.sampleTest(SwethaTasty.java:83)
+	at com.appium.test.SwethaTasty.sampleTest(SwethaTasty.java:82)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -851,6 +949,52 @@ Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
 	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
 	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
 	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></pre></td>
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                        <li class='exception displayed active'>
+                            <div class='exception-heading'>
+                                <span class='exception-name'>java.lang.Throwable</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+                            </div>
+                            <div class='exception-content hide'>
+                                <div class='exception-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>May 26, 2020 08:42:20 PM</td>
+                                                        <td class='linked' test-id='5'>sampleTest1</td>
+                                                        <td><pre><pre>java.lang.Throwable: Method SwethaTasty.sampleTest1(java.lang.String)[pri:0, instance:com.appium.test.SwethaTasty@3d34d211] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
@@ -895,31 +1039,31 @@ Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>4</div>
+					<div class='panel-lead'>5</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>4</div>
+					<div class='panel-lead'>5</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>May 26, 2020 04:38:00 PM</div>
+					<div class='panel-lead'>May 26, 2020 08:40:32 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>May 26, 2020 04:38:38 PM</div>
+			 		<div class='panel-lead'>May 26, 2020 08:42:22 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 37s+768ms</div>
+					<div class='panel-lead'>0h 1m 49s+353ms</div>
 				</div>
 			</div>
 		</div>
@@ -937,17 +1081,17 @@ Session ID: 8a58442c-27d0-4bf3-9998-ef37b4661391
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
-				skipParent: 0,
-				exceptionsParent: 4,
+				skipParent: 1,
+				exceptionsParent: 5,
 				
 				passChild: 0,
 				failChild: 4,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
-				skipChild: 0,
+				skipChild: 1,
 				infoChild: 0,
-				exceptionsChild: 4,
+				exceptionsChild: 5,
 				
 				passGrandChild: 0,
 				failGrandChild: 0,
