@@ -4,15 +4,16 @@
 	<listeners>
 		<listener class-name="com.listner.TestListener" />
 	</listeners>
- 	<test name="Real Device Test">
+ 	<!--    <test name="Real Device Test">
 		<parameter name="Device" value="Real_Device"></parameter>
 		<classes>
 			<class name="com.appium.test.EmiCalculatorKevin" />
 		</classes>
-	</test>	
-	 <test name="Test"> <parameter name="Device" value="Cloud_Device"></parameter> 
-		<classes> <class name="com.appium.test.EmiCalculatorKevin" /> </classes> </test>		
-	<test name="Emulator Test">
+		</test>	
+	 	  <test name="Test"> <parameter name="Device" value="Cloud_Device"></parameter> 
+		<classes> <class name="com.appium.test.EmiCalculatorKevin" /> </classes> </test> -->
+			
+	   <test name="Emulator Test">
 		<parameter name="Device" value="Emulator_Device"></parameter>
 		<classes>
 			<class name="com.appium.test.EmiCalculatorKevin" />

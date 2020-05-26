@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="7" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-05-22T13:42:01 IST" name="Suite" finished-at="2020-05-22T13:42:50 IST" duration-ms="49099">
+  <suite started-at="2020-05-26T15:15:30 IST" name="Suite" finished-at="2020-05-26T15:24:15 IST" duration-ms="524698">
     <groups>
     </groups>
-    <test started-at="2020-05-22T13:42:01 IST" name="Test" finished-at="2020-05-22T13:42:50 IST" duration-ms="49099">
+    <test started-at="2020-05-26T15:15:30 IST" name="Emulator Test" finished-at="2020-05-26T15:24:15 IST" duration-ms="524698">
       <class name="com.appium.test.EmiCalculatorKevin">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.appium.test.EmiCalculatorKevin@38102d01]" started-at="2020-05-22T13:42:01 IST" name="setUp" finished-at="2020-05-22T13:42:11 IST" duration-ms="9855" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.appium.test.EmiCalculatorKevin@291b4bf5]" started-at="2020-05-26T15:15:30 IST" name="setUp" finished-at="2020-05-26T15:16:10 IST" duration-ms="39927" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Cloud_Device]]>
+                <![CDATA[Emulator_Device]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="sampleTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.EmiCalculatorKevin@38102d01]" started-at="2020-05-22T13:42:13 IST" name="sampleTest" data-provider="dp" finished-at="2020-05-22T13:42:44 IST" duration-ms="30974" status="PASS">
+        <test-method signature="sampleTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.EmiCalculatorKevin@291b4bf5]" started-at="2020-05-26T15:16:22 IST" name="sampleTest" data-provider="dp" finished-at="2020-05-26T15:17:38 IST" duration-ms="75767" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[10000.0]]>
+                <![CDATA[10000]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[5.0]]>
+                <![CDATA[5]]>
               </value>
             </param>
             <param index="2">
@@ -39,11 +39,99 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sampleTest -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.appium.test.EmiCalculatorKevin@38102d01]" started-at="2020-05-22T13:42:44 IST" name="afterTest" finished-at="2020-05-22T13:42:50 IST" duration-ms="6681" status="PASS">
+        <test-method signature="sampleTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.EmiCalculatorKevin@291b4bf5]" started-at="2020-05-26T15:17:38 IST" name="sampleTest" data-provider="dp" finished-at="2020-05-26T15:18:49 IST" duration-ms="71397" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[20000]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[6]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Home Loan]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampleTest -->
+        <test-method signature="sampleTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.EmiCalculatorKevin@291b4bf5]" started-at="2020-05-26T15:18:49 IST" name="sampleTest" data-provider="dp" finished-at="2020-05-26T15:19:56 IST" duration-ms="66812" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[30000]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[8]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Bike Loan]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampleTest -->
+        <test-method signature="sampleTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.EmiCalculatorKevin@291b4bf5]" started-at="2020-05-26T15:19:56 IST" name="sampleTest" data-provider="dp" finished-at="2020-05-26T15:20:48 IST" duration-ms="52353" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[25000]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[8]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Mobile Loan]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampleTest -->
+        <test-method signature="sampleTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.EmiCalculatorKevin@291b4bf5]" started-at="2020-05-26T15:20:48 IST" name="sampleTest" data-provider="dp" finished-at="2020-05-26T15:21:56 IST" duration-ms="67971" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[35000]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[8]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Flat Loan]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampleTest -->
+        <test-method signature="sampleTest2()[pri:0, instance:com.appium.test.EmiCalculatorKevin@291b4bf5]" started-at="2020-05-26T15:21:56 IST" name="sampleTest2" finished-at="2020-05-26T15:24:06 IST" depends-on-methods="com.appium.test.EmiCalculatorKevin.sampleTest" duration-ms="129800" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampleTest2 -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.appium.test.EmiCalculatorKevin@291b4bf5]" started-at="2020-05-26T15:24:06 IST" name="afterTest" finished-at="2020-05-26T15:24:15 IST" duration-ms="9173" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- com.appium.test.EmiCalculatorKevin -->
-    </test> <!-- Test -->
+    </test> <!-- Emulator Test -->
   </suite> <!-- Suite -->
 </testng-results>
