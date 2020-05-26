@@ -6,6 +6,7 @@ import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -13,10 +14,12 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.appium.pageObjects.pageObjects_Swetha;
+import com.helper.DatabaseConnection;
 import com.helper.ExcelUtil;
 import com.helper.UserActions;
 public class SwethaTasty {
@@ -75,29 +78,49 @@ public class SwethaTasty {
   }
   @Test(dataProvider = "dp")
   public void sampleTest(String recepieName) {
-	 user.Click(pageObjects_Swetha.SearchBox);
-	 user.Click(pageObjects_Swetha.clicksearch);
-	 user.ClearAndSendKeys(pageObjects_Swetha.clicksearch, recepieName);
-	 user.Click(pageObjects_Swetha.Suggestion);
-//	 if(accessKey==null) {
-//		 user.Click(pageObjects_Swetha.ImageView);
-//	 }else {
-//		 user.Click(pageObjects_Swetha.selectItem);
-//	 }
+	  System.out.println(recepieName);
+		
+		  user.Click(pageObjects_Swetha.SearchBox);
+		  user.Click(pageObjects_Swetha.clicksearch);
+		  user.ClearAndSendKeys(pageObjects_Swetha.clicksearch, recepieName);
+		  user.Click(pageObjects_Swetha.Suggestion); 
+		  user.Click(pageObjects_Swetha.ImageView); 
+		  user.Click(pageObjects_Swetha.selectItem); 
+		 
+		 user.Click(pageObjects_Swetha.selectItem);
+		  user.Click(pageObjects_Swetha.AddtoReceipes);
+		 user.Click(pageObjects_Swetha.MyReceipes);
+		 user.Click(pageObjects_Swetha.Discover);
+		 user.Click(pageObjects_Swetha.BackButton);
+		  
+  }
+  @Test(dependsOnMethods ="sampleTest")
+  public void sampleTest1(String recepieName) {
+	  
 	 
-	 user.Click(pageObjects_Swetha.selectItem);
-	 user.Click(pageObjects_Swetha.AddtoReceipes);
-	 user.Click(pageObjects_Swetha.MyReceipes);
-	 user.Click(pageObjects_Swetha.Discover);
-	 user.Click(pageObjects_Swetha.BackButton);
+	  user.Click(pageObjects_Swetha.SearchBox);
+	  user.Click(pageObjects_Swetha.clicksearch);
+	
+	 
   }
-	  
+  
+  @Ignore
   @DataProvider
-  public Object[] dp() {
-	  
-		return ExcelUtil.getTestData("./testData.xlsx", "Swetha")  ;
-	  
+  public Object[][] dp1() throws SQLException {
+	  return ExcelUtil.getTestData("./testData.xlsx", "Swetha")  ;
   }
+  
+  
+  @DataProvider
+  public Object[][] dp() throws SQLException {
+	 // return new Object [][] {{"Fried rice"},{"Pasta"}};
+		//return ExcelUtil.getTestData("./testData.xlsx", "Swetha")  ;
+	  
+	Object data[][]= DatabaseConnection.getDataFromDatabase("Swetha");     
+          return data;
+      }
+	  
+  
   
 
   @AfterClass

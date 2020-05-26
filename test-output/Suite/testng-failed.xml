@@ -4,16 +4,17 @@
   <listeners>
     <listener class-name="com.listner.TestListener"/>
   </listeners>
-  <test thread-count="5" name="Suganth Cloud(failed)">
-    <parameter name="Device" value="Cloud_Device"/>
+  <test thread-count="5" name="Swetha Emulator device(failed)">
+    <parameter name="Device" value="Emulator_Device"/>
     <classes>
-      <class name="com.appium.test.Gnucash">
+      <class name="com.appium.test.SwethaTasty">
         <methods>
-          <include name="withoutDataProvider"/>
+          <include name="login"/>
+          <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="afterTest"/>
+          <include name="sampleTest" invocation-numbers="0 1 2 3"/>
         </methods>
-      </class> <!-- com.appium.test.Gnucash -->
+      </class> <!-- com.appium.test.SwethaTasty -->
     </classes>
-  </test> <!-- Suganth Cloud(failed) -->
+  </test> <!-- Swetha Emulator device(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -1,32 +1,243 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="0" failed="0" skipped="5">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-05-22T19:38:52 IST" name="Suite" finished-at="2020-05-22T19:39:37 IST" duration-ms="44584">
+  <suite started-at="2020-05-26T16:40:38 IST" name="Default suite" finished-at="2020-05-26T16:40:50 IST" duration-ms="12712">
     <groups>
     </groups>
-    <test started-at="2020-05-22T19:38:52 IST" name="Suganth Cloud" finished-at="2020-05-22T19:39:37 IST" duration-ms="44584">
-      <class name="com.appium.test.Gnucash">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.appium.test.Gnucash@70325e14]" started-at="2020-05-22T19:38:52 IST" name="setUp" finished-at="2020-05-22T19:39:04 IST" duration-ms="11392" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Cloud_Device]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2020-05-26T16:40:38 IST" name="Default test" finished-at="2020-05-26T16:40:50 IST" duration-ms="12712">
+      <class name="com.appium.test.SwethaTasty">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.appium.test.SwethaTasty@159f197]" started-at="2020-05-26T16:40:38 IST" name="setUp" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1590491438237" status="FAIL">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'Device' is required by BeforeTest on method setUp but has not been marked @Optional or defined
+in C:\Users\DELL\AppData\Local\Temp\testng-eclipse-1755074857\testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'Device' is required by BeforeTest on method setUp but has not been marked @Optional or defined
+in C:\Users\DELL\AppData\Local\Temp\testng-eclipse-1755074857\testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:289)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
+at org.testng.internal.Parameters.createParameters(Parameters.java:721)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:623)
+at org.testng.TestRunner.beforeRun(TestRunner.java:613)
+at org.testng.TestRunner.run(TestRunner.java:584)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="withoutDataProvider()[pri:0, instance:com.appium.test.Gnucash@70325e14]" started-at="2020-05-22T19:39:04 IST" name="withoutDataProvider" finished-at="2020-05-22T19:39:30 IST" duration-ms="26603" status="PASS">
+        <test-method is-config="true" signature="login()[pri:0, instance:com.appium.test.SwethaTasty@159f197]" started-at="2020-05-26T16:40:38 IST" name="login" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1590491438316" status="SKIP">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- withoutDataProvider -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.appium.test.Gnucash@70325e14]" started-at="2020-05-22T19:39:30 IST" name="afterTest" finished-at="2020-05-22T19:39:37 IST" duration-ms="6543" status="PASS">
+        </test-method> <!-- login -->
+        <test-method signature="sampleTest(java.lang.String)[pri:0, instance:com.appium.test.SwethaTasty@159f197]" started-at="2020-05-26T16:40:50 IST" name="sampleTest" data-provider="dp" finished-at="2020-05-26T16:40:50 IST" duration-ms="0" status="SKIP">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'Device' is required by BeforeTest on method setUp but has not been marked @Optional or defined
+in C:\Users\DELL\AppData\Local\Temp\testng-eclipse-1755074857\testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'Device' is required by BeforeTest on method setUp but has not been marked @Optional or defined
+in C:\Users\DELL\AppData\Local\Temp\testng-eclipse-1755074857\testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:289)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
+at org.testng.internal.Parameters.createParameters(Parameters.java:721)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:623)
+at org.testng.TestRunner.beforeRun(TestRunner.java:613)
+at org.testng.TestRunner.run(TestRunner.java:584)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- com.appium.test.Gnucash -->
-    </test> <!-- Suganth Cloud -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- sampleTest -->
+        <test-method signature="sampleTest(java.lang.String)[pri:0, instance:com.appium.test.SwethaTasty@159f197]" started-at="2020-05-26T16:40:50 IST" name="sampleTest" data-provider="dp" finished-at="2020-05-26T16:40:50 IST" duration-ms="0" status="SKIP">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'Device' is required by BeforeTest on method setUp but has not been marked @Optional or defined
+in C:\Users\DELL\AppData\Local\Temp\testng-eclipse-1755074857\testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'Device' is required by BeforeTest on method setUp but has not been marked @Optional or defined
+in C:\Users\DELL\AppData\Local\Temp\testng-eclipse-1755074857\testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:289)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
+at org.testng.internal.Parameters.createParameters(Parameters.java:721)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:623)
+at org.testng.TestRunner.beforeRun(TestRunner.java:613)
+at org.testng.TestRunner.run(TestRunner.java:584)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampleTest -->
+        <test-method signature="sampleTest(java.lang.String)[pri:0, instance:com.appium.test.SwethaTasty@159f197]" started-at="2020-05-26T16:40:50 IST" name="sampleTest" data-provider="dp" finished-at="2020-05-26T16:40:50 IST" duration-ms="0" status="SKIP">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'Device' is required by BeforeTest on method setUp but has not been marked @Optional or defined
+in C:\Users\DELL\AppData\Local\Temp\testng-eclipse-1755074857\testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'Device' is required by BeforeTest on method setUp but has not been marked @Optional or defined
+in C:\Users\DELL\AppData\Local\Temp\testng-eclipse-1755074857\testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:289)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
+at org.testng.internal.Parameters.createParameters(Parameters.java:721)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:623)
+at org.testng.TestRunner.beforeRun(TestRunner.java:613)
+at org.testng.TestRunner.run(TestRunner.java:584)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampleTest -->
+        <test-method signature="sampleTest(java.lang.String)[pri:0, instance:com.appium.test.SwethaTasty@159f197]" started-at="2020-05-26T16:40:50 IST" name="sampleTest" data-provider="dp" finished-at="2020-05-26T16:40:50 IST" duration-ms="0" status="SKIP">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'Device' is required by BeforeTest on method setUp but has not been marked @Optional or defined
+in C:\Users\DELL\AppData\Local\Temp\testng-eclipse-1755074857\testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'Device' is required by BeforeTest on method setUp but has not been marked @Optional or defined
+in C:\Users\DELL\AppData\Local\Temp\testng-eclipse-1755074857\testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:289)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
+at org.testng.internal.Parameters.createParameters(Parameters.java:721)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:623)
+at org.testng.TestRunner.beforeRun(TestRunner.java:613)
+at org.testng.TestRunner.run(TestRunner.java:584)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampleTest -->
+        <test-method signature="sampleTest1(java.lang.String)[pri:0, instance:com.appium.test.SwethaTasty@159f197]" started-at="2020-05-26T16:40:50 IST" name="sampleTest1" finished-at="2020-05-26T16:40:50 IST" depends-on-methods="com.appium.test.SwethaTasty.sampleTest" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method SwethaTasty.sampleTest1(java.lang.String)[pri:0, instance:com.appium.test.SwethaTasty@159f197] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method SwethaTasty.sampleTest1(java.lang.String)[pri:0, instance:com.appium.test.SwethaTasty@159f197] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampleTest1 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.appium.test.SwethaTasty@159f197]" started-at="2020-05-26T16:40:50 IST" name="tearDown" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1590491450943" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.appium.test.SwethaTasty -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
