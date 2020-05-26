@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <testng-results ignored="1" total="5" passed="0" failed="4" skipped="0">
   <reporter-output>
   </reporter-output>
@@ -13,10 +14,22 @@
           </reporter-output>
         </test-method> <!-- beforeSuite -->
         <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.appium.test.wordweb_Mohan@5fbe4146]" started-at="2020-05-26T15:43:23 IST" name="setUp" finished-at="2020-05-26T15:43:55 IST" duration-ms="31881" status="PASS">
+=======
+<testng-results ignored="1" total="7" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-05-26T15:15:30 IST" name="Suite" finished-at="2020-05-26T15:24:15 IST" duration-ms="524698">
+    <groups>
+    </groups>
+    <test started-at="2020-05-26T15:15:30 IST" name="Emulator Test" finished-at="2020-05-26T15:24:15 IST" duration-ms="524698">
+      <class name="com.appium.test.EmiCalculatorKevin">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.appium.test.EmiCalculatorKevin@291b4bf5]" started-at="2020-05-26T15:15:30 IST" name="setUp" finished-at="2020-05-26T15:16:10 IST" duration-ms="39927" status="PASS">
+>>>>>>> origin/Kevinrynjah
           <params>
             <param index="0">
               <value>
                 <![CDATA[Emulator_Device]]>
+<<<<<<< HEAD
 =======
 <testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
@@ -36,12 +49,15 @@
               <value>
                 <![CDATA[Real_Device]]>
 >>>>>>> origin/Shambhu
+=======
+>>>>>>> origin/Kevinrynjah
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
+<<<<<<< HEAD
 <<<<<<< HEAD
         <test-method is-config="true" signature="loadDatabase()[pri:0, instance:com.appium.test.wordweb_Mohan@5fbe4146]" started-at="2020-05-26T15:43:55 IST" name="loadDatabase" finished-at="2020-05-26T15:43:56 IST" duration-ms="1311" status="PASS">
           <reporter-output>
@@ -56,11 +72,22 @@
             <param index="0">
               <value>
                 <![CDATA[mistakenly]]>
+=======
+        <test-method signature="sampleTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.EmiCalculatorKevin@291b4bf5]" started-at="2020-05-26T15:16:22 IST" name="sampleTest" data-provider="dp" finished-at="2020-05-26T15:17:38 IST" duration-ms="75767" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[10000]]>
+>>>>>>> origin/Kevinrynjah
               </value>
             </param>
             <param index="1">
               <value>
+<<<<<<< HEAD
                 <![CDATA[3]]>
+=======
+                <![CDATA[5]]>
+>>>>>>> origin/Kevinrynjah
               </value>
             </param>
           </params>
@@ -246,6 +273,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
         <test-method is-config="true" signature="takeAppScreenShot()[pri:0, instance:com.appium.test.wordweb_Mohan@5fbe4146]" started-at="2020-05-26T15:44:00 IST" name="takeAppScreenShot" finished-at="2020-05-26T15:44:00 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- takeAppScreenShot -->
         <test-method signature="Wordweb(java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.wordweb_Mohan@5fbe4146]" started-at="2020-05-26T15:44:00 IST" name="Wordweb" data-provider="dp" finished-at="2020-05-26T15:44:01 IST" duration-ms="27" status="FAIL">
           <params>
@@ -262,11 +290,51 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <param index="0">
               <value>
                 <![CDATA[Real_Device]]>
+=======
+        </test-method> <!-- sampleTest -->
+        <test-method signature="sampleTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.EmiCalculatorKevin@291b4bf5]" started-at="2020-05-26T15:17:38 IST" name="sampleTest" data-provider="dp" finished-at="2020-05-26T15:18:49 IST" duration-ms="71397" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[20000]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[6]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Home Loan]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
+        </test-method> <!-- sampleTest -->
+        <test-method signature="sampleTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.EmiCalculatorKevin@291b4bf5]" started-at="2020-05-26T15:18:49 IST" name="sampleTest" data-provider="dp" finished-at="2020-05-26T15:19:56 IST" duration-ms="66812" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[30000]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[8]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Bike Loan]]>
+>>>>>>> origin/Kevinrynjah
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- beforeMethod -->
         <test-method status="PASS" signature="searchWheelSize(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.WheelSize@7219ec67]" name="searchWheelSize" duration-ms="9905" started-at="2020-05-26T14:04:46Z" data-provider="dp" finished-at="2020-05-26T14:04:56Z">
           <params>
@@ -274,10 +342,19 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               <value>
                 <![CDATA[Apollo]]>
 >>>>>>> origin/Shambhu
+=======
+        </test-method> <!-- sampleTest -->
+        <test-method signature="sampleTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.EmiCalculatorKevin@291b4bf5]" started-at="2020-05-26T15:19:56 IST" name="sampleTest" data-provider="dp" finished-at="2020-05-26T15:20:48 IST" duration-ms="52353" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[25000]]>
+>>>>>>> origin/Kevinrynjah
               </value>
             </param>
             <param index="1">
               <value>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <![CDATA[2]]>
               </value>
@@ -373,10 +450,30 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <param index="0">
               <value>
                 <![CDATA[takeout]]>
+=======
+                <![CDATA[8]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Mobile Loan]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampleTest -->
+        <test-method signature="sampleTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.appium.test.EmiCalculatorKevin@291b4bf5]" started-at="2020-05-26T15:20:48 IST" name="sampleTest" data-provider="dp" finished-at="2020-05-26T15:21:56 IST" duration-ms="67971" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[35000]]>
+>>>>>>> origin/Kevinrynjah
               </value>
             </param>
             <param index="1">
               <value>
+<<<<<<< HEAD
                 <![CDATA[4]]>
               </value>
             </param>
@@ -635,5 +732,29 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
       </class> <!-- com.appium.test.WheelSize -->
     </test> <!-- Cloud test Mohan -->
 >>>>>>> origin/Shambhu
+=======
+                <![CDATA[8]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Flat Loan]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampleTest -->
+        <test-method signature="sampleTest2()[pri:0, instance:com.appium.test.EmiCalculatorKevin@291b4bf5]" started-at="2020-05-26T15:21:56 IST" name="sampleTest2" finished-at="2020-05-26T15:24:06 IST" depends-on-methods="com.appium.test.EmiCalculatorKevin.sampleTest" duration-ms="129800" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampleTest2 -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.appium.test.EmiCalculatorKevin@291b4bf5]" started-at="2020-05-26T15:24:06 IST" name="afterTest" finished-at="2020-05-26T15:24:15 IST" duration-ms="9173" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.appium.test.EmiCalculatorKevin -->
+    </test> <!-- Emulator Test -->
+>>>>>>> origin/Kevinrynjah
   </suite> <!-- Suite -->
 </testng-results>

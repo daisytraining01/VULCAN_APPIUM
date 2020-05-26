@@ -32,14 +32,14 @@ public class pageObjects  {
 
  
  
- 
- //------------KEVIN-------------------
+
  public static final	By amount = By.id("com.avrapps.emicalculator:id/amount");
  public static final	By interest = By.id("com.avrapps.emicalculator:id/interest");
  public static final	By calculate = By.id("com.avrapps.emicalculator:id/button");
  public static final	By save = By.id("com.avrapps.emicalculator:id/button2");
  public static final	By emi_Name = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v7.widget.LinearLayoutCompat/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.EditText");
  public static final	By ok_button = By.id("android:id/button1");
+
  
 
  public static final	By confirmationButton1 = By.id("android:id/button3");
@@ -55,5 +55,16 @@ public class pageObjects  {
  public static final	By search4 = By.id("patel.krupesh.amazinguniversefactsapp:id/message");
 
  public static final	By search5 = By.id("patel.krupesh.amazinguniversefactsapp:id/title_content");
+
+ public static final 	By Saved_Emi = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.ImageView");
+ public static final 	By Emi = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.RelativeLayout/android.widget.LinearLayout/android.support.v7.widget.RecyclerView/android.widget.RelativeLayout");
+ public static final	By Currency_Tab = By.id("currency");
+ public static final 	By Currency = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.CheckedTextView[2]");
+ public static final	By Navigate_Tab = By.id("Navigate up");
+ public static final 	By Emi_Cal = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.ImageView");
+
+
+
+
 
 }

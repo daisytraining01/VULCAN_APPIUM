@@ -6,15 +6,28 @@
     <listener class-name="com.listner.TestListener"/>
   </listeners>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <test thread-count="5" name="Mohan  Emulator(failed)">
     <parameter name="Device" value="Emulator_Device"/>
+=======
+  <test thread-count="5" parallel="tests" name="Real Device Test(failed)">
+    <parameter name="Device" value="Real_Device"/>
+>>>>>>> origin/Kevinrynjah
     <classes>
       <class name="com.appium.test.wordweb_Mohan">
         <methods>
+<<<<<<< HEAD
           <include name="afterSuit"/>
           <include name="setUp"/>
           <include name="takeAppScreenShot"/>
           <include name="loadDatabase"/>
+=======
+          <include name="afterclass"/>
+          <include name="setUp"/>
+          <include name="sampleTest2"/>
+          <include name="beforeclass"/>
+          <include name="sampleTest"/>
+>>>>>>> origin/Kevinrynjah
           <include name="afterTest"/>
           <include name="beforeSuite"/>
           <include name="exit"/>
@@ -22,6 +35,7 @@
         </methods>
       </class> <!-- com.appium.test.wordweb_Mohan -->
     </classes>
+<<<<<<< HEAD
   </test> <!-- Mohan  Emulator(failed) -->
 =======
   <test name="Cloud test Mohan">
@@ -31,4 +45,7 @@
     </classes>
   </test> <!-- Cloud test Mohan -->
 >>>>>>> origin/Shambhu
+=======
+  </test> <!-- Real Device Test(failed) -->
+>>>>>>> origin/Kevinrynjah
 </suite> <!-- Failed suite [Suite] -->
