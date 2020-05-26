@@ -31,7 +31,7 @@ public class EmiCalculatorKevin {
 	AndroidDriver driver;
 	private boolean tenure;
     private String accessKey = "eyJ4cC51Ijo0NTU2OTcsInhwLnAiOjQ1NTY4OSwieHAubSI6Ik1UVTRPVE0yTnprMU1EQXlNdyIsImFsZyI6IkhTMjU2In0.eyJleHAiOjE5MDQ3Mjc5NTAsImlzcyI6ImNvbS5leHBlcml0ZXN0In0.9PEKvslTXNVQjibm_oLIBni8iknsIwo1etQfjBMQ8ME";
-	@Parameters({"Device"})		
+	@Parameters({"Device"})
 	@BeforeTest
 	public void setUp( String Device) throws MalformedURLException {
 		
@@ -50,7 +50,6 @@ public class EmiCalculatorKevin {
 		    URL remoteUrl = new URL("http://localhost:4723/wd/hub");
 		    driver = new AndroidDriver(remoteUrl, desiredCapabilities);
 			user= new UserActions(driver);
-						
 		} else if (Device.contentEquals("Cloud_Device")) {
 			System.out.println("Entering Cloud device");
 			//desiredCapabilities.setCapability("testName", "Mani");

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<<<<<<< HEAD
 <suite   name="Suite">
 	<listeners>
 		<listener class-name="com.listner.TestListener" />
@@ -74,3 +75,16 @@
 </suite>
 
 
+=======
+<suite name="Suite">
+	<listeners>
+		<listener class-name="com.listner.TestListener" />
+	</listeners>
+	<test name="Cloud test Mohan">
+		<parameter name="Device" value="Real_Device"></parameter>
+		<classes>
+			<class name="com.appium.test.WheelSize" />
+		</classes>
+	</test>
+</suite>
+>>>>>>> origin/Shambhu
