@@ -12,6 +12,7 @@
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="sampleTest"/>
+          <include name="sampleTest1"/>
         </methods>
       </class> <!-- com.notepad.test.Notepad -->
     </classes>

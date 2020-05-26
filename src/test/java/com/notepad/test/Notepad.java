@@ -10,6 +10,7 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
@@ -66,7 +67,7 @@ public class Notepad {
 			desiredCapabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.hilarywang29.notepad2");
 			desiredCapabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY,
 					"com.hilarywang29.notepad2.MainActivity");
-			driver = new AndroidDriver(new URL("http://localhost:4726/wd/hub"), desiredCapabilities);
+			driver = new AndroidDriver(new URL("https://demo.experitest.com/wd/hub"), desiredCapabilities);
 			user = new UserActions(driver);
 
 		} else if (Device.contentEquals("Real_Device")) {
@@ -95,31 +96,75 @@ public class Notepad {
 	@Test(dataProvider = "dp")
 	public void sampleTest(String title, String content) throws IOException {
 
-		user.Click(PageObjects.newNote);
-		user.SendKeys(PageObjects.editTitle, title);
-		user.SendKeys(PageObjects.editContent, content);
-		user.Click(PageObjects.saveNote);
+		/*
+		 * @Test public void sampleTest() { MobileElement el1 = (MobileElement)
+		 * driver.findElementByAccessibilityId("New Note"); el1.click(); MobileElement
+		 * el2 = (MobileElement)
+		 * driver.findElementById("com.hilarywang29.notepad2:id/editTitle");
+		 * el2.sendKeys("SIT"); MobileElement el3 = (MobileElement)
+		 * driver.findElementById("com.hilarywang29.notepad2:id/editContent");
+		 * el3.sendKeys("SIT-System Integration Testing"); MobileElement el4 =
+		 * (MobileElement) driver.findElementByAccessibilityId("Save"); el4.click(); }
+		 * 
+		 */
+
+		/*
+		 * @Test public void sampleTest() { MobileElement el1 = (MobileElement)
+		 * driver.findElementByAccessibilityId("New Note"); el1.click(); MobileElement
+		 * el2 = (MobileElement)
+		 * driver.findElementById("com.hilarywang29.notepad2:id/editTitle");
+		 * el2.sendKeys("UAT"); MobileElement el3 = (MobileElement)
+		 * driver.findElementById("com.hilarywang29.notepad2:id/editContent");
+		 * el3.sendKeys("User Acceptance Testing"); MobileElement el4 = (MobileElement)
+		 * driver.findElementByAccessibilityId("Save"); el4.click(); MobileElement el5 =
+		 * (MobileElement) driver.findElementByXPath(
+		 * "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ListView/android.widget.LinearLayout"
+		 * ); el5.click(); MobileElement el6 = (MobileElement)
+		 * driver.findElementByAccessibilityId("Delete Note"); el6.click();
+		 * MobileElement el7 = (MobileElement)
+		 * driver.findElementById("android:id/button1"); el7.click();
+		 * 
+		 */
 
 		user.Click(PageObjects.newNote);
 		user.SendKeys(PageObjects.editTitle, title);
 		user.SendKeys(PageObjects.editContent, content);
 		user.Click(PageObjects.saveNote);
-
-		user.Click(PageObjects.SavedItems);
-		user.Click(PageObjects.Delete);
-
-		user.Click(PageObjects.Button);
 
 	}
+	@Test(dataProvider = "dp1",dependsOnMethods = { "sampleTest" })	
 
+    public void sampleTest1(String title1, String content1) {
+
+
+	user.Click(PageObjects.newNote);
+	user.SendKeys(PageObjects.editTitle,title1);
+	user.SendKeys(PageObjects.editContent,content1);
+	user.Click(PageObjects.saveNote);
+	user.Click(PageObjects.frame);
+	user.Click(PageObjects.deleteNote);
+	user.Click(PageObjects.button);
+
+	}
 	@DataProvider
 	public Object[][] dp() {
 
 		return ExcelUtil.getTestData("./testData.xlsx", "Madhu");
+
+	}
+
+	@DataProvider
+	public Object[][] dp1() {
+
+		return ExcelUtil.getTestData("./testData.xlsx", "Madhu1");
+
 	}
 
 	@AfterTest
 	public void tearDown() {
 		driver.quit();
 	}
+
+//	@AfterTest
+
 }

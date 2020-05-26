@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="116836" started-at="2020-05-22T20:01:19 IST" finished-at="2020-05-22T20:03:15 IST">
+  <suite name="Suite" duration-ms="67321" started-at="2020-05-26T16:19:10 IST" finished-at="2020-05-26T16:20:17 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="116836" started-at="2020-05-22T20:01:19 IST" finished-at="2020-05-22T20:03:15 IST">
+    <test name="Test" duration-ms="67321" started-at="2020-05-26T16:19:10 IST" finished-at="2020-05-26T16:20:17 IST">
       <class name="com.notepad.test.Notepad">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.notepad.test.Notepad@1372ed45]" name="setUp" is-config="true" duration-ms="31535" started-at="2020-05-22T20:01:19 IST" finished-at="2020-05-22T20:01:50 IST">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.notepad.test.Notepad@37574691]" name="setUp" is-config="true" duration-ms="25217" started-at="2020-05-26T16:19:10 IST" finished-at="2020-05-26T16:19:35 IST">
           <params>
             <param index="0">
               <value>
@@ -18,39 +18,39 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="sampleTest(java.lang.String, java.lang.String)[pri:0, instance:com.notepad.test.Notepad@1372ed45]" name="sampleTest" duration-ms="34479" started-at="2020-05-22T20:01:54 IST" data-provider="dp" finished-at="2020-05-22T20:02:29 IST">
+        <test-method status="PASS" signature="sampleTest(java.lang.String, java.lang.String)[pri:0, instance:com.notepad.test.Notepad@37574691]" name="sampleTest" duration-ms="16391" started-at="2020-05-26T16:19:38 IST" data-provider="dp" finished-at="2020-05-26T16:19:55 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Appium]]>
+                <![CDATA[SIT]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[Hi Appium]]>
+                <![CDATA[System Integration Testing]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sampleTest -->
-        <test-method status="PASS" signature="sampleTest(java.lang.String, java.lang.String)[pri:0, instance:com.notepad.test.Notepad@1372ed45]" name="sampleTest" duration-ms="38400" started-at="2020-05-22T20:02:29 IST" data-provider="dp" finished-at="2020-05-22T20:03:07 IST">
+        <test-method status="PASS" signature="sampleTest1(java.lang.String, java.lang.String)[pri:0, instance:com.notepad.test.Notepad@37574691]" name="sampleTest1" duration-ms="18422" started-at="2020-05-26T16:19:55 IST" data-provider="dp1" depends-on-methods="com.notepad.test.Notepad.sampleTest" finished-at="2020-05-26T16:20:13 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Hi Appium]]>
+                <![CDATA[UAT]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[Appium, mobile testing]]>
+                <![CDATA[User Acceptance Testing]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- sampleTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.notepad.test.Notepad@1372ed45]" name="tearDown" is-config="true" duration-ms="8381" started-at="2020-05-22T20:03:07 IST" finished-at="2020-05-22T20:03:15 IST">
+        </test-method> <!-- sampleTest1 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.notepad.test.Notepad@37574691]" name="tearDown" is-config="true" duration-ms="3629" started-at="2020-05-26T16:20:13 IST" finished-at="2020-05-26T16:20:17 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
