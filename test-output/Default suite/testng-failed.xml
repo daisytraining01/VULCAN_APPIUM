@@ -1,50 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       <class name="com.appium.test.wordweb_Mohan">
-=======
-      <class name="com.appium.test.EmiCalculatorKevin">
->>>>>>> kevin
-=======
-      <class name="com.appium.test.Univtestng">
->>>>>>> origin/gokulbranch1
         <methods>
-          <include name="sampleTest"/>
-          <include name="tearDown"/>
+          <include name="afterSuit"/>
           <include name="setUp"/>
-<<<<<<< HEAD
-<<<<<<< HEAD
+          <include name="takeAppScreenShot"/>
+          <include name="loadDatabase"/>
           <include name="afterTest"/>
-          <include name="login"/>
-          <include name="logout"/>
+          <include name="beforeSuite"/>
+          <include name="exit"/>
+          <include name="Wordweb"/>
         </methods>
       </class> <!-- com.appium.test.wordweb_Mohan -->
-=======
-=======
-      <class name="com.appium.test.SwethaTasty">
-        <methods>
-          <include name="login"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
->>>>>>> origin/SwethaBranch
-          <include name="sampleTest"/>
-          <include name="afterTest"/>
-        </methods>
-<<<<<<< HEAD
-      </class> <!-- com.appium.test.EmiCalculatorKevin -->
->>>>>>> kevin
-=======
-      </class> <!-- com.appium.test.SwethaTasty -->
->>>>>>> origin/SwethaBranch
-=======
-        </methods>
-      </class> <!-- com.appium.test.Univtestng -->
->>>>>>> origin/gokulbranch1
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

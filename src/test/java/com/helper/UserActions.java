@@ -38,8 +38,10 @@ public class UserActions {
 	
 	public  void pass(String Text,AndroidDriver<MobileElement> driver) throws IOException {
 		System.out.println(driver !=null);
+		if(TestListener.test!=null) {
+			TestListener.test.get().pass(Text,MediaEntityBuilder.createScreenCaptureFromBase64String(((TakesScreenshot)driver).getScreenshotAs(OutputType.BASE64)).build());
+		}
 		
-		TestListener.test.get().pass(Text,MediaEntityBuilder.createScreenCaptureFromBase64String(((TakesScreenshot)driver).getScreenshotAs(OutputType.BASE64)).build());
 	}
 	
 	

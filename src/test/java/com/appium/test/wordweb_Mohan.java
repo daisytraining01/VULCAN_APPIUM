@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 
 import com.appium.pageObjects.pageObjects_Mohan;
 import com.beust.jcommander.Parameter;
+import com.helper.DatabaseConnector;
 import com.helper.ExcelUtil;
 import com.helper.UserActions;
 import com.listner.TestListener;
@@ -17,23 +18,26 @@ import io.appium.java_client.touch.offset.PointOption;
 
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 
 
-@Listeners(TestListener.class)
-
-
+//@Listeners(TestListener.class)
 
 public class wordweb_Mohan  {
 	
@@ -44,11 +48,16 @@ public class wordweb_Mohan  {
 	static String accessKey = null;
 
 	
-	@Parameters({"Device"})		
+	
+	
+	@BeforeSuite
+	public void beforeSuite() {
+		System.out.println("Entering Suite");
+	}
+	
+	@Parameters({"Device"})	
 	@BeforeTest
 	public void setUp(String Device) throws MalformedURLException {
-		
-	
 		DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 		System.out.println(Device);
 		if (Device.contentEquals("Real_Device")) {
@@ -104,33 +113,60 @@ public class wordweb_Mohan  {
 		if(accessKey==null) {
 			user.Click(pageObjects_Mohan.clikCheckatabase);
 		}
-		
-		
-		
 	}
 	
 	
-	
-	@Test(dataProvider = "dp")
-	public void Wordweb(String searchText, String wordType) throws IOException {
-		System.out.println("Enter");
+	@BeforeMethod
+	public void takeAppScreenShot() throws IOException {
+		
+		
+			}
 
-	    
-	    
-		
-		user.ClearAndSendKeys(pageObjects_Mohan.searchText, searchText);
+	@Ignore
+	@Test
+	public void WordwebWithoutDP() throws IOException {
+		user.ClearAndSendKeys(pageObjects_Mohan.searchText, "Hello");
 		user.Click(pageObjects_Mohan.clickFirstResult);
-		
 		user.pass("Tetxt search result", driver);
 		user.Click(pageObjects_Mohan.bookMark);
 		user.Click(pageObjects_Mohan.backButton);
+		user.Click(pageObjects_Mohan.searchTab);
+		switch (Integer.parseInt( "1")) {
+		case 1:
+			user.Click(pageObjects_Mohan.noun);
+			break;
+		case 2:
+			user.Click(pageObjects_Mohan.verb);
+			break;
+		case 3:
+			user.Click(pageObjects_Mohan.adverb);
+			break;
+		case 4:
+			user.Click(pageObjects_Mohan.adjuctive);
+			break;
+
+		default:
+			user.Click(pageObjects_Mohan.noun);
+		}
+		user.ClearAndSendKeys(pageObjects_Mohan.searchText, "1");
+		driver.pressKey(new KeyEvent(AndroidKey.ENTER));
+		user.Click(pageObjects_Mohan.clickFirstResultType);
+		user.pass("Tetxt search result", driver);
+		user.Click(pageObjects_Mohan.bookMark);
+		user.Click(pageObjects_Mohan.backButton);
+		user.Click(pageObjects_Mohan.lookup);
+	}
+
+	@Test(dataProvider = "dp")
+	public void Wordweb(String searchText, String wordType) throws IOException {
 		
-		
+		user.ClearAndSendKeys(pageObjects_Mohan.searchText, searchText);
+		user.Click(pageObjects_Mohan.clickFirstResult);
+		user.pass("Tetxt search result", driver);
+		user.Click(pageObjects_Mohan.bookMark);
+		user.Click(pageObjects_Mohan.backButton);
 		user.Click(pageObjects_Mohan.searchTab);
 		System.out.println(wordType);
-		
-//		System.out.println(Integer.parseInt( wordType.split(".")[0]));
-		
 		
 		switch (Integer.parseInt( wordType)) {
 		case 1:
@@ -150,41 +186,43 @@ public class wordweb_Mohan  {
 			user.Click(pageObjects_Mohan.noun);
 		}
 		
-		
-		
-		
 		user.ClearAndSendKeys(pageObjects_Mohan.searchText, searchText);
-		
 		driver.pressKey(new KeyEvent(AndroidKey.ENTER));
-		
 		user.Click(pageObjects_Mohan.clickFirstResultType);
-		
 		user.pass("Tetxt search result", driver);
 		user.Click(pageObjects_Mohan.bookMark);
 		user.Click(pageObjects_Mohan.backButton);
 		user.Click(pageObjects_Mohan.lookup);
-		  
-
 
 	}
-	
 	
 	  @DataProvider
-	  public Object[][] dp() {
+	  public Object[][] dp() throws SQLException {
+//		  Object data[][]= ExcelUtil.getTestData("./testData.xlsx", "Mohan")  ;
+		  Object data[][]= DatabaseConnector.getDataFromDatabase("Mohan");	 
 		  
-			return ExcelUtil.getTestData("./testData.xlsx", "Mohan")  ;
+		  for(int i=0;i<=3;i++) {
+				  for(int j=0;j<2;j++) {
+				  System.out.println(i + " "+ j);
+				  System.out.println(data[i][j]);
+			  }
+			  
+		  }	  
+		  return data;
+		  }
 
-	  }
-	
-	
 	@AfterClass
-	public void logout() throws IOException {
-
+	public void exit() throws IOException {
+		user.pass("Exiting Application", driver);
 	}
-
 	@AfterTest
 	public void afterTest() {
 		driver.quit();
+	}
+	
+	@AfterSuite
+	public void afterSuit() {
+		System.out.println("Exiting Suite");
 	}
 
 }

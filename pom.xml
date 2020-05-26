@@ -12,12 +12,12 @@
 			<version>3.141.59</version>
 		</dependency>
 		<dependency>
-    <groupId>com.google.inject</groupId>
-    <artifactId>guice</artifactId>
-    <version>4.1.0</version>
-    <classifier>no_aop</classifier>
-    <scope>provided</scope>
-</dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>4.1.0</version>
+			<classifier>no_aop</classifier>
+			<scope>provided</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
@@ -38,6 +38,16 @@
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
 			<version>3.1.5</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.20</version>
+		</dependency>
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>4.0.0</version>
 		</dependency>
 	</dependencies>
 	<build>
