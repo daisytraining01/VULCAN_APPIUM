@@ -11,6 +11,8 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
@@ -79,30 +81,28 @@ public class SwethaTasty {
   @Test(dataProvider = "dp")
   public void sampleTest(String recepieName) throws InterruptedException {
 
-		user.Click(pageObjects_Swetha.clicksearch);
-		  user.ClearAndSendKeys(pageObjects_Swetha.EnterSeach, recepieName);
-		  user.Click(pageObjects_Swetha.Suggestion); 
-		  user.Click(pageObjects_Swetha.ImageView); 
-		  user.Click(pageObjects_Swetha.selectItem); 
-		 
-		 user.Click(pageObjects_Swetha.selectItem);
-		  user.Click(pageObjects_Swetha.AddtoReceipes);
+         user.Click(pageObjects_Swetha.SearchBox); 
+         user.Click(pageObjects_Swetha.clicksearch);
+		 user.ClearAndSendKeys(pageObjects_Swetha.EnterSeach, recepieName);
+		 user.Click(pageObjects_Swetha.Suggestion); 
+		 user.Click(pageObjects_Swetha.ImageView); 
+		 user.Click(pageObjects_Swetha.AddtoReceipes);
 		 user.Click(pageObjects_Swetha.MyReceipes);
 		 user.Click(pageObjects_Swetha.Discover);
 		 user.Click(pageObjects_Swetha.BackButton);
 		  
   }
 
-  @Test(dependsOnMethods ="sampleTest")
-  public void sampleTest1(String recepieName) {
-	  
-	 
-	  user.Click(pageObjects_Swetha.SearchBox);
-	 
-	
-	 
-  }
-  @Ignore
+// @Test(dependsOnMethods ="sampleTest")
+// public void sampleTest1(String recepieName) {
+//	 
+//	
+//	 user.Click(pageObjects_Swetha.clicksearch);
+// 
+//	
+// 
+// }
+ @Ignore
   @DataProvider
   public Object[][] dp1() throws SQLException {
 	  return ExcelUtil.getTestData("./testData.xlsx", "Swetha")  ;
