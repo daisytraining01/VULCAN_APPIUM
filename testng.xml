@@ -4,58 +4,14 @@
 	<listeners>
 		<listener class-name="com.listner.TestListener" />
 	</listeners>
-<!--  
-	<test name="Cloud test Mohan">
+	<test name="Gayathri_Cloud Device">
 		<parameter name="Device" value="Cloud_Device"></parameter>
 		<classes>
-			<class name="com.appium.test.wordweb_Mohan" />
-		</classes>
-	</test>
-	
-	<test name="Test">
-		<parameter name="Device" value="Cloud_Device"></parameter>
-		<classes>
-			<class name="com.appium.test.SwethaTasty" />
-		</classes>
-	</test> -->
-	
-	<test name="Cloud test Kevin">
-		<parameter name="Device" value="Cloud_Device"></parameter>
-		<classes>
-			<class name="com.appium.test.EmiCalculatorKevin" />
-		</classes>
-	</test>
-	
-	<test name="Gokul Cloud">
-		<parameter name="Device" value="Cloud_Device"></parameter>
-		<classes>
-			<class name="com.appium.test.Univtestng" />
-		</classes>
-	</test>
-	
-	
-	
-	<test name="Mohan real Emulator">
-		<parameter name="Device" value="Real_Device"></parameter>
-		<classes>
-			<class name="com.appium.test.wordweb_Mohan" />
+			<class name="com.appium.test.Calcgayathri" />
 		</classes>
 	</test>  
 	
-	<test name="Swetha Emulator device">
-		<parameter name="Device" value="Emulator_Device"></parameter>
-		<classes>
-			<class name="com.appium.test.SwethaTasty" />
-		</classes>
-	</test>
 	
-	<test name="Suganth Cloud">
-		<parameter name="Device" value="Cloud_Device"></parameter>
-		<classes>
-			<class name="com.appium.test.Gnucash" />
-		</classes>
-	</test>
-
 </suite>
 
 

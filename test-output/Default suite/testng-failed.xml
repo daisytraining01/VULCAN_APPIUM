@@ -3,48 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <class name="com.appium.test.wordweb_Mohan">
-=======
-      <class name="com.appium.test.EmiCalculatorKevin">
->>>>>>> kevin
-=======
-      <class name="com.appium.test.Univtestng">
->>>>>>> origin/gokulbranch1
+      <class name="com.appium.test.Calcgayathri">
         <methods>
           <include name="sampleTest"/>
           <include name="tearDown"/>
           <include name="setUp"/>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <include name="afterTest"/>
-          <include name="login"/>
-          <include name="logout"/>
         </methods>
-      </class> <!-- com.appium.test.wordweb_Mohan -->
-=======
-=======
-      <class name="com.appium.test.SwethaTasty">
-        <methods>
-          <include name="login"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
->>>>>>> origin/SwethaBranch
-          <include name="sampleTest"/>
-          <include name="afterTest"/>
-        </methods>
-<<<<<<< HEAD
-      </class> <!-- com.appium.test.EmiCalculatorKevin -->
->>>>>>> kevin
-=======
-      </class> <!-- com.appium.test.SwethaTasty -->
->>>>>>> origin/SwethaBranch
-=======
-        </methods>
-      </class> <!-- com.appium.test.Univtestng -->
->>>>>>> origin/gokulbranch1
+      </class> <!-- com.appium.test.Calcgayathri -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
